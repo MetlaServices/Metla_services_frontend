@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Add any custom styles to your global CSS file or in a specific component CSS module */
+
+/* global.css or any custom CSS file */
+.bg-contact-form {
+  background-image: url('https://img.freepik.com/free-photo/hot-line-contact-us-call-center-search-interface_53876-124009.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+
+/* In your global CSS file or Tailwind CSS configuration */
+
+.bg-cream {
+  background-color: #f5f5dc; /* Cream color */
+}
+
+.line-animation {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px; /* Adjust height as needed */
+  background-color: #4f46e5; /* Change color as needed */
+  animation: moveLine 1s infinite alternate;
+}
+/* AadharEntry.css */
+.line-animation {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 50%, rgba(0, 255, 0, 0.5) 50%);
+  background-size: 200% 100%;
+  animation: moveLine 1s linear infinite;
+}
+
+@keyframes moveLine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
