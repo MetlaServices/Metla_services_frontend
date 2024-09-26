@@ -63,7 +63,7 @@ const Achievements: React.FC = () => {
         <div className="absolute inset-0 bg-[#147971] opacity-60"></div>
       </div>
       <div className="relative z-10 p-6 md:p-12 lg:p-24">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-12 text-white ">Our Achievements</h2>
+        <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-12 text-white ">Our Achievements</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {achievements.map((achieve, index) => (
             <motion.div
@@ -75,12 +75,12 @@ const Achievements: React.FC = () => {
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
               <div className="text-5xl mb-4">{achieve.icon}</div>
-              <h3
+              <h2
                 ref={(el) => (countRefs.current[index] = el)}
                 className="text-4xl font-bold text-gray-800 count"
               >
                 {/* The counting value will be updated by GSAP */}
-              </h3>
+              </h2>
               <p className="text-gray-600 text-lg">{achieve.label}</p>
             </motion.div>
           ))}

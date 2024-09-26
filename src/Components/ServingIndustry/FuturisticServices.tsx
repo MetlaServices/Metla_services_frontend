@@ -79,7 +79,7 @@ const FuturisticServices: React.FC = () => {
 
   return (
     <div className="service-section p-6 bg-gray-200 h-auto">
-      <h2 className="text-4xl font-extrabold text-center mb-12 text-[#147971]">Futuristic Services and Innovations</h2>
+      <h1 className="text-4xl font-extrabold text-center mb-12 text-[#147971]">Futuristic Services and Innovations</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {services.map((service, index) => (
           <motion.div
@@ -97,10 +97,10 @@ const FuturisticServices: React.FC = () => {
               transition: { duration: 0.2 }
             }}
           >
-            <div 
+            <h2 
               className="absolute inset-0 bg-cover bg-center transition-opacity duration-500 ease-in-out group-hover:opacity-50"
               style={{ backgroundImage: service.bgImage, backgroundSize: 'cover', backgroundPosition: 'center' }}
-            ></div>
+            ></h2>
             <div className="relative z-10 p-6 text-center text-white bg-gradient-to-t from-gray-800 to-transparent">
               <div className="mb-4">
                 {service.icon}

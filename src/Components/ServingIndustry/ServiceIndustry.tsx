@@ -49,11 +49,11 @@ const IndustryCards: React.FC = () => {
   return (
     <div className="p-6 bg-gray-100 ">
       <div className="text-4xl md:text-5xl font-bold text-center mb-8">
-        <div ref={headingRef} className="heading-animation" style={{ color: '#FF6347' }}></div>
+        <h1 ref={headingRef} className="heading-animation" style={{ color: '#FF6347' }}></h1>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
         {industries.map((industry, index) => (
-          <motion.div
+          <motion.h2
             key={index}
             className="group relative bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center overflow-hidden"
             initial={{ opacity: 0, y: 20 }}
@@ -75,7 +75,7 @@ const IndustryCards: React.FC = () => {
             <h3 className="text-xl font-semibold relative z-10 transition-colors duration-300 ease-in-out group-hover:text-white">
               {industry.title}
             </h3>
-          </motion.div>
+          </motion.h2>
         ))}
       </div>
     </div>

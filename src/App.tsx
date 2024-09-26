@@ -6,6 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import Routing from './Components/Routing/Routing';
 import Footer from './Components/Footer/Footer';
 import Chat from './Components/ChatBot/ChatBot';
+import React from 'react';
 // import CameraCapture from './Components/ChatBot/Scanner';
 
 function App() {
