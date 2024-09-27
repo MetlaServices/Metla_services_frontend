@@ -2,21 +2,24 @@ import { useRef, useEffect, useState } from "react";
 import { Carousel } from 'antd';
 import { motion } from 'framer-motion';
 import 'antd/dist/reset.css';
+import Carousel1 from '../../assets/Carosuel/Leadership-Consulting-1024x512.webp'
+import Carousel2 from '../../assets/Carosuel/tw-Experienced-Professionals-Nov-2022.webp'
+import Carousel3 from '../../assets/Carosuel/carousel1.webp';
 
 const carouselImages = [
   
   {
-    src: 'https://richmond.technology/wp-content/uploads/2022/12/Leadership-Consulting-1024x512.jpeg',
+    src: Carousel1,
     heading: 'Choosing the Right Person',
     content: 'Find top talent that aligns perfectly with your organizational goals. Our expert consultants ensure you make the right hire every time.'
   },
   {
-    src: 'https://www.morganstanley.com/content/dam/msdotcom/people/Careers/tw-Experienced-Professionals-Nov-2022.jpg',
+    src: Carousel2,
     heading: 'Expert Professionals',
     content: 'Leverage the expertise of seasoned professionals who bring innovative solutions and industry insights to your business challenges.'
   },
   {
-    src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    src: Carousel3,
     heading: 'Innovative Solutions',
     content: 'Discover cutting-edge solutions designed to drive growth and success. Our approach combines creativity with technology to transform your business.'
   },
