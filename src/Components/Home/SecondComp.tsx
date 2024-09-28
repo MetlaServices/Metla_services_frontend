@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 
 // Import images
-import serviceImg1 from '../../assets/service-01.webp';
-import serviceImg2 from '../../assets/service-02.webp';
-import serviceImg3 from '../../assets/service-03.webp';
-import serviceImg4 from '../../assets/service-04.webp';
-import serviceImg7 from '../../assets/service-07.webp';
-import serviceImg8 from '../../assets/service-08.webp';
-import serviceImg9 from '../../assets/service9.jpg';
+import serviceImg1 from '../../assets/Services/service-01.webp';
+import serviceImg2 from '../../assets/Services/service-02.webp';
+import serviceImg3 from '../../assets/Services/service-03.webp';
+import serviceImg4 from '../../assets/Services/service-04.webp';
+import serviceImg7 from '../../assets/Services/service-05.webp';
+import serviceImg8 from '../../assets/Services/service-08.webp';
+import serviceImg9 from '../../assets/Services/service9.webp'
 
 // Define types for card data
 interface CardData {
@@ -50,7 +50,7 @@ export const SecondComponent: React.FC = () => {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center mb-6 text-[#147971]">Exploring the World of Manpower and Staffing Solutions</h1>
           <p className="text-lg text-gray-600 text-center mb-8 leading-relaxed">
-            Welcome to Metla Services Private Limited’s detailed exploration of the dynamic and evolving realm...
+            Welcome to Metla Services Private Limited’s detailed exploration of the dynamic and evolving realm
           </p>
         </div>
       </section>

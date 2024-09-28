@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FaCogs, FaCode, FaLaptopCode, FaNetworkWired } from 'react-icons/fa';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import ITStaffingImage from '../../assets/itstaffing.jpg';
+import ITStaffingImage from '../../assets/Services/IT_Staffing.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 

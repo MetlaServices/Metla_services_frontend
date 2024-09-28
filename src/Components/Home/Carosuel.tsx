@@ -2,8 +2,8 @@ import { useRef, useEffect, useState } from "react";
 import { Carousel } from 'antd';
 import { motion } from 'framer-motion';
 import 'antd/dist/reset.css';
-import Carousel1 from '../../assets/Carosuel/Leadership-Consulting-1024x512.webp'
-import Carousel2 from '../../assets/Carosuel/tw-Experienced-Professionals-Nov-2022.webp'
+import Carousel1 from '../../assets/Carosuel/carosuel2.webp'
+import Carousel2 from '../../assets/Carosuel/carosuel3.webp'
 import Carousel3 from '../../assets/Carosuel/carousel1.webp';
 
 const carouselImages = [

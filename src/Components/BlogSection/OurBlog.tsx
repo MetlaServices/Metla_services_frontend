@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 // Import images
-import blogImage1 from '../../assets/BlogSection/talent_acquition.png'; // Adjust path as necessary
-import blogImage2 from '../../assets/BlogSection/manpower.png'; // Adjust path as necessary
-import blogImage3 from '../../assets/BlogSection/employee_engagement.jpg'; // Adjust path as necessary
+import blogImage1 from '../../assets/BlogSection/talent_acquition.webp'; // Adjust path as necessary
+import blogImage2 from '../../assets/BlogSection/manpower.webp'; // Adjust path as necessary
+import blogImage3 from '../../assets/BlogSection/employee_engagement.webp'; // Adjust path as necessary
 
 interface BlogPost {
   title: string;

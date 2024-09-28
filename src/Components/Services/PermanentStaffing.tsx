@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'antd';
 import { FaUserTie, FaHandshake, FaHandHoldingUsd } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import PermanentStaffing from '../../assets/permanent_staffing.webp';
+import PermanentStaffing from '../../assets/Services/permanent_staffing.webp';
 
 const fadeInVariant = {
   hidden: { opacity: 0, y: 50 },

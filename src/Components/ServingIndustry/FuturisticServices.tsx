@@ -5,9 +5,9 @@ import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
 // Import images
-import image1 from '../../assets/remote_work.jpeg';
-import image2 from '../../assets/Virtual-hiring-tools.jpg';
-import image3 from '../../assets/AI-Skills-Assessment.jpg';
+import image1 from '../../assets/remote_work.webp';
+import image2 from '../../assets/Virtual-hiring-tools.webp';
+import image3 from '../../assets/AI-Skills-Assessment.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 

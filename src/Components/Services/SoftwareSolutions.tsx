@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import softwareBackground from '../../assets/service9.jpg'; // Adjust path as needed
+import softwareBackground from '../../assets/Services/service9.webp'; // Adjust path as needed
 
 // Register ScrollTrigger with GSAP
 gsap.registerPlugin(ScrollTrigger);

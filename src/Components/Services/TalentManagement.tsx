@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import talentAcquisitionImage from '../../assets/talent_acquition.png';
+import talentAcquisitionImage from '../../assets/Services/talent_management.webp';
 import { Link } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);

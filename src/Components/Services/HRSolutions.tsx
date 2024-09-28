@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { FaChartLine, FaUsers, FaChalkboardTeacher, FaPeopleArrows, FaLaptopCode, FaShieldAlt, FaBullseye } from 'react-icons/fa';
-import hrConsultancyImg from '../../assets/hr_consultancy.png'; // Import the image
+import hrConsultancyImg from '../../assets/hr_consultancy.webp'; // Import the image
 
 // TypeScript interface for card data
 interface CardData {
