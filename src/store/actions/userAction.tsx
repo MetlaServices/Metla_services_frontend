@@ -76,9 +76,20 @@ export const asyncCurrentUser = (): AppThunk => async (dispatch) => {
     }
 };
 
-export const asyncSendContactDetails = (formData: any): AppThunk => async () => {
+export const asyncSendClientQuery = (formData: any): AppThunk => async () => {
     try {
-        await axios.post('/user/sendContactData', formData);
+        await axios.post('/user/clientQuery', formData);
+        message.success('Contact details submitted successfully!');
+    } catch (error) {
+        console.error(error);
+        message.error('Failed to send the query. Please try again!');
+    }
+};
+
+
+export const asyncSendEmployeeQuery = (formData: any): AppThunk => async () => {
+    try {
+        await axios.post('/user/employeeQuery', formData);
         message.success('Contact details submitted successfully!');
     } catch (error) {
         console.error(error);

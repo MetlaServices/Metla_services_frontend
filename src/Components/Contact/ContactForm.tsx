@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Input, Button, Spin } from 'antd';
 import { useAppDispatch } from '../Redux-Hooks/hooks';
-import { asyncSendContactDetails } from '../../store/actions/userAction';
+import { asyncSendClientQuery } from '../../store/actions/userAction';
 import contactImage from '../../assets/contact_us.avif'; // Adjust path as necessary
 
 const { TextArea } = Input;
@@ -12,7 +12,7 @@ const ContactForm: React.FC = () => {
 
   const onFinish = async (values: any) => {
     setLoading(true); // Start loading
-    await dispatch(asyncSendContactDetails(values));
+    await dispatch(asyncSendClientQuery(values));
     setLoading(false); // Stop loading after submission
   };
 

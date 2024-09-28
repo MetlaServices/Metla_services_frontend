@@ -3,7 +3,7 @@ import { Form, Input, Button } from 'antd';
 import { MailOutlined, PhoneOutlined, EnvironmentOutlined } from '@ant-design/icons';
 import { motion } from 'framer-motion';
 import { useAppDispatch } from '../Redux-Hooks/hooks';
-import { asyncSendContactDetails } from '../../store/actions/userAction';
+import {  asyncSendEmployeeQuery } from '../../store/actions/userAction';
 import { gsap } from 'gsap';
 
 // Phone number validation regex
@@ -17,7 +17,7 @@ const GetInTouch: React.FC = () => {
   const onFinish = async (values: any) => {
     setLoading(true);
     try {
-      await dispatch(asyncSendContactDetails(values));
+      await dispatch(asyncSendEmployeeQuery(values));
       // Optionally handle successful submission (e.g., show success message)
     } catch (error) {
       console.error('Form submission error:', error);
