@@ -21,14 +21,50 @@ interface CardData {
 
 // Example card data with link property
 const cardData: CardData[] = [
-  { imgSrc: serviceImg1, title: 'Contract Staffing Solutions', description: 'Tailored staffing solutions...', link: 'contract-staffing' },
-  { imgSrc: serviceImg2, title: 'IT Staffing Solutions', description: 'Specialized in sourcing top talent...', link: 'it-staffing' },
-  { imgSrc: serviceImg3, title: 'Executive Search Services', description: 'Our executive search services help...', link: 'executive-search' },
-  { imgSrc: serviceImg4, title: 'Permanent Staffing Solutions', description: 'Find the right candidates for your...', link: 'permanent-staffing' },
-  { imgSrc: serviceImg9, title: 'Software Solutions', description: 'Innovative software solutions for modern...', link: 'software-solutions' },
-  { imgSrc: serviceImg7, title: 'HR Solutions', description: 'Enhance your team with skilled professionals...', link: 'hr-consultancy' },
-  { imgSrc: serviceImg8, title: 'Talent Management Solutions', description: 'Optimize your talent strategy...', link: 'talent-management' },
+  {
+    imgSrc: serviceImg1,
+    title: 'Contract Staffing Solutions',
+    description: 'Flexible staffing solutions tailored to your business needs, ensuring the right fit for your team.',
+    link: 'contract-staffing',
+  },
+  {
+    imgSrc: serviceImg2,
+    title: 'Expert IT Recruitment',
+    description: 'Specialized in finding top tech talent to meet your organization’s IT requirements efficiently.',
+    link: 'it-staffing',
+  },
+  {
+    imgSrc: serviceImg3,
+    title: 'Leadership Executive Search',
+    description: 'Dedicated to helping you find and attract top executives for leadership roles in your organization.',
+    link: 'executive-search',
+  },
+  {
+    imgSrc: serviceImg4,
+    title: 'Permanent Staffing Services',
+    description: 'Comprehensive solutions to help you secure the right candidates for permanent positions in your company.',
+    link: 'permanent-staffing',
+  },
+  {
+    imgSrc: serviceImg9,
+    title: 'Innovative Software Solutions',
+    description: 'Tailored software solutions designed to enhance your business operations and drive growth.',
+    link: 'software-solutions',
+  },
+  {
+    imgSrc: serviceImg7,
+    title: 'Comprehensive HR Solutions',
+    description: 'Enhance your workforce with our HR solutions that improve team management and employee satisfaction.',
+    link: 'hr-consultancy',
+  },
+  {
+    imgSrc: serviceImg8,
+    title: 'Talent Management Strategies',
+    description: 'Optimize your talent strategy with solutions designed to engage and develop your workforce effectively.',
+    link: 'talent-management',
+  },
 ];
+
 
 export const SecondComponent: React.FC = () => {
   const cardsRef = useRef<HTMLDivElement[]>([]);
