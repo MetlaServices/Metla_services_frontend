@@ -50,7 +50,7 @@ const Testimonials: React.FC = () => {
 
   return (
     <div className="testimonial-section p-6 bg-gray-100 h-auto">
-      <h1 className="text-4xl font-extrabold text-center mb-12 text-[#147971]">Words From Customers</h1>
+      <h2 className="text-4xl font-extrabold text-center mb-12 text-[#147971]">Words From Customers</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {testimonials.map((testimonial, index) => (
           <motion.div
@@ -61,8 +61,8 @@ const Testimonials: React.FC = () => {
             animate="visible"
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
-            <p className="text-gray-700 mb-4">{testimonial.feedback}</p>
-            <h2 className="text-xl font-semibold text-blue-600">{testimonial.name}</h2>
+            <h3 className="text-gray-700 mb-4">{testimonial.feedback}</h3>
+            <h4 className="text-xl font-semibold text-blue-600">{testimonial.name}</h4>
           </motion.div>
         ))}
       </div>

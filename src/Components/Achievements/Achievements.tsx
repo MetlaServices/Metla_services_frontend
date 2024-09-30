@@ -63,7 +63,7 @@ const Achievements: React.FC = () => {
         <div className="absolute inset-0 bg-[#147971] opacity-60"></div>
       </div>
       <div className="relative z-10 p-6 md:p-12 lg:p-24">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-12 text-white ">Our Achievements</h1>
+        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-12 text-white ">Our Achievements</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {achievements.map((achieve, index) => (
             <motion.div

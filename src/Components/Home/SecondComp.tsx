@@ -49,16 +49,16 @@ export const SecondComponent: React.FC = () => {
       <section className="py-12 bg-gray-100">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center mb-6 text-[#147971]">Exploring the World of Manpower and Staffing Solutions</h1>
-          <p className="text-lg text-gray-600 text-center mb-8 leading-relaxed">
+          <h3 className="text-lg text-gray-600 text-center mb-8 leading-relaxed">
             Welcome to Metla Services Private Limited’s detailed exploration of the dynamic and evolving realm
-          </p>
+          </h3>
         </div>
       </section>
 
       {/* Services Overview */}
       <section className="py-12 bg-gradient-to-br from-[#f3f4f6] to-[#d1d5db]">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-8 text-[#147971]">Our Services</h1>
+          <h2 className="text-4xl font-bold text-center mb-8 text-[#147971]">Our Services</h2>
           <div className="flex flex-wrap justify-center gap-8">
             {cardData.map((card, index) => (
               <div
@@ -80,9 +80,9 @@ export const SecondComponent: React.FC = () => {
                     <h2 className="text-xl font-semibold mb-2 text-white">
                       {card.title}
                     </h2>
-                    <p className="text-gray-200 mb-4 text-sm text-center">
+                    <h3 className="text-gray-200 mb-4 text-sm text-center">
                       {card.description}
-                    </p>
+                    </h3>
                     <Link
                       to={`/services/${card.link}`}
                       className="text-white hover:underline font-semibold text-sm bg-[#fcbc04] py-2 px-4 rounded-full"

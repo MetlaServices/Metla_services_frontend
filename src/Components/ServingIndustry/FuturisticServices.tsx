@@ -97,10 +97,10 @@ const FuturisticServices: React.FC = () => {
               transition: { duration: 0.2 }
             }}
           >
-            <h2 
+            <h3 
               className="absolute inset-0 bg-cover bg-center transition-opacity duration-500 ease-in-out group-hover:opacity-50"
               style={{ backgroundImage: service.bgImage, backgroundSize: 'cover', backgroundPosition: 'center' }}
-            ></h2>
+            ></h3>
             <div className="relative z-10 p-6 text-center text-white bg-gradient-to-t from-gray-800 to-transparent">
               <div className="mb-4">
                 {service.icon}
