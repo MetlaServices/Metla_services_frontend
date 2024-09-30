@@ -54,7 +54,7 @@ const HowItWorks: React.FC = () => {
   return (
     <div className="bg-gray-100 py-12 px-4">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8 text-[#147971]">How It Works</h2>
+        <div className="text-3xl font-bold text-center mb-8 text-[#147971]">How It Works</div>
         <p className="text-lg text-center mb-12">Just a few steps and you are ready to go</p>
         <motion.div
           ref={ref}
@@ -70,7 +70,7 @@ const HowItWorks: React.FC = () => {
               variants={itemVariants}
             >
               <div className="mb-4">{step.icon}</div>
-              <h2 className="text-xl font-semibold mb-2">{step.title}</h2>
+              <div className="text-xl font-semibold mb-2">{step.title}</div>
               <p className="text-gray-600 text-center">{step.description}</p>
             </motion.div>
           ))}

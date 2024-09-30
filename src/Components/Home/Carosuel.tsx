@@ -70,11 +70,11 @@ const CarouselEffect = () => {
               transition={{ duration: 0.5, ease: "easeOut" }}
             >
               <div className="p-4 sm:p-6 md:p-8 lg:p-10 text-center">
-                <motion.h2
+                <motion.div
                   className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4"
                 >
                   {image.heading}
-                </motion.h2>
+                </motion.div>
                 <motion.p
                   className="text-white text-sm sm:text-base md:text-lg lg:text-xl"
                 >

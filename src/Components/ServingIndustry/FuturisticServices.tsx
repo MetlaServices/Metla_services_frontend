@@ -79,7 +79,7 @@ const FuturisticServices: React.FC = () => {
 
   return (
     <div className="service-section p-6 bg-gray-200 h-auto">
-      <h2 className="text-4xl font-extrabold text-center mb-12 text-[#147971]">Futuristic Services and Innovations</h2>
+      <div className="text-4xl font-extrabold text-center mb-12 text-[#147971]">Futuristic Services and Innovations</div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {services.map((service, index) => (
           <motion.div
