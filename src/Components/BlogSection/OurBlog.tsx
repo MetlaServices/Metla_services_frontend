@@ -43,9 +43,9 @@ const BlogSection: React.FC = () => {
 
   return (
     <div className="blog-section p-6 md:p-12 bg-gray-100">
-      <h1 className="section-heading text-4xl font-extrabold text-center mb-12 text-[#147971]">
+      <h2 className="section-heading text-4xl font-extrabold text-center mb-12 text-[#147971]">
         Our Recent Blog
-      </h1>
+      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {blogPosts.map((post, index) => (
           <div

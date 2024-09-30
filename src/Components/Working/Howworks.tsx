@@ -54,7 +54,7 @@ const HowItWorks: React.FC = () => {
   return (
     <div className="bg-gray-100 py-12 px-4">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-3xl font-bold text-center mb-8 text-[#147971]">How It Works</h1>
+        <h2 className="text-3xl font-bold text-center mb-8 text-[#147971]">How It Works</h2>
         <p className="text-lg text-center mb-12">Just a few steps and you are ready to go</p>
         <motion.div
           ref={ref}

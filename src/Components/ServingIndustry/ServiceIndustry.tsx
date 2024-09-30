@@ -49,7 +49,7 @@ const IndustryCards: React.FC = () => {
   return (
     <div className="p-6 bg-gray-100 ">
       <div className="text-4xl md:text-5xl font-bold text-center mb-8">
-        <h1 ref={headingRef} className="heading-animation" style={{ color: '#FF6347' }}></h1>
+        <h3 ref={headingRef} className="heading-animation" style={{ color: '#FF6347' }}></h3>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
         {industries.map((industry, index) => (
