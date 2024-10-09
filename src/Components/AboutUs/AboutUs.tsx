@@ -1,15 +1,16 @@
 import { Card, Col, Row } from 'antd';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet'; // Import Helmet
 import 'antd/dist/reset.css';
 import 'tailwindcss/tailwind.css';
 
 // Import images
-import introductionImage from '../../assets/AboutUs/introduction.webp'; // Replace with your image
-import insightsImage from '../../assets/AboutUs/insights.webp'; // Replace with your image
-import philosophyImage from '../../assets/AboutUs/philosophy.webp'; // Replace with your image
-import focusImage from '../../assets/AboutUs/focus.jpg'; // Replace with your image
-import clientSatisfactionImage from '../../assets/AboutUs/customer_satisfaction.png'; // Replace with your image
-import customImage from '../../assets/AboutUs/custom_solutions.avif'; // Replace with your image
+import introductionImage from '../../assets/AboutUs/introduction.webp';
+import insightsImage from '../../assets/AboutUs/insights.webp';
+import philosophyImage from '../../assets/AboutUs/philosophy.webp';
+import focusImage from '../../assets/AboutUs/focus.jpg';
+import clientSatisfactionImage from '../../assets/AboutUs/customer_satisfaction.png';
+import customImage from '../../assets/AboutUs/custom_solutions.avif';
 
 const cardContent = [
   {
@@ -47,6 +48,15 @@ const cardContent = [
 const AboutUsPage = () => {
   return (
     <div className="bg-gray-100 py-12">
+      <Helmet>
+        <title>About Us - Metla Services</title>
+        <meta name="description" content="Learn about Metla Services, where we transform workforce solutions with personalized strategies and industry insights." />
+        <meta property="og:title" content="About Us - Metla Services" />
+        <meta property="og:description" content="Discover our commitment to excellence, industry insights, and custom HR solutions that align with your organizational goals." />
+        <meta property="og:image" content={introductionImage} />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
       <div className="container mx-auto px-4">
         {/* Hero Section */}
         <div className="relative w-full h-[50vh] overflow-hidden mb-12">
