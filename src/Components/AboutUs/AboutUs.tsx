@@ -48,8 +48,8 @@ const AboutUsPage = () => {
   return (
     <div className="bg-gray-100 py-12">
       <div className="container mx-auto px-4">
-        {/* Carousel Section */}
-        <div className="relative w-full h-96 overflow-hidden mb-12">
+        {/* Hero Section */}
+        <div className="relative w-full h-[50vh] overflow-hidden mb-12">
           <img
             src={introductionImage}
             alt="Introduction"
@@ -67,7 +67,7 @@ const AboutUsPage = () => {
           </div>
         </div>
 
-        {/* Card Section */}
+        {/* Cards Section */}
         <section className="mb-12">
           <div className="text-center mb-8">
             <motion.h2
@@ -76,19 +76,20 @@ const AboutUsPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
             >
-              Our Services
+              About Us
             </motion.h2>
           </div>
-          <Row gutter={16}>
+
+          <Row gutter={[16, 16]} justify="center">
             {cardContent.map((card, index) => (
-              <Col xs={24} sm={12} md={8} lg={4} key={index}>
+              <Col xs={24} sm={12} md={8} lg={8} key={index}>
                 <motion.div
-                  className="bg-white rounded-lg shadow-lg overflow-hidden mb-6"
+                  className="bg-white rounded-lg shadow-lg overflow-hidden"
                   whileHover={{ scale: 1.05, boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.2)" }}
                   transition={{ duration: 0.3 }}
                 >
                   <Card
-                    cover={<img alt={card.title} src={card.image} className="w-full h-40 object-cover" />}
+                    cover={<img alt={card.title} src={card.image} className="w-full h-56 object-cover" />}
                   >
                     <Card.Meta
                       title={<h3 className="text-xl font-bold text-center">{card.title}</h3>}
