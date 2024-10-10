@@ -49,7 +49,7 @@ function App() {
     <>
     <Helmet>
         <link rel="canonical" href={getCanonicalUrl()} />
-        <title>Your Page Title</title>
+        <title>Best Recruitment Agency</title>
       </Helmet>
       <Nav />
       
