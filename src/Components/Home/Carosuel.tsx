@@ -15,7 +15,7 @@ const carouselImages = [
   },
   {
     src: Carousel2,
-    heading: 'Expert Professionals',
+    heading: 'Experienced Professionals',
     content: 'Leverage the expertise of seasoned professionals who bring innovative solutions and industry insights to your business challenges.'
   },
   {
