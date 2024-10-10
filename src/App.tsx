@@ -38,7 +38,6 @@ function App() {
         return 'https://www.metlaservices.com/services/software-solutions';
       case 'services/talent-management':
           return 'https://www.metlaservices.com/services/talent-management';
-    
       case '/contact':
         return 'https://www.metlaservices.com/contact';
       default:

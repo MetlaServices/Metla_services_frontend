@@ -32,7 +32,7 @@ const PopupForm: React.FC<PopupFormProps> = ({ visible, onClose }) => {
 
   return (
     <Modal
-      title="User Form"
+      title="Quick Inquiry"
       visible={visible}
       onOk={handleOk}
       onCancel={onClose}
@@ -56,25 +56,27 @@ const PopupForm: React.FC<PopupFormProps> = ({ visible, onClose }) => {
         >
           <Input placeholder="Enter your email" />
         </Form.Item>
+
         <Form.Item
-          label="Phone Number"
-          name="phone"
-          rules={[
-            { required: true, message: 'Please input your phone number!' },
-            {
-              pattern: /^\d{10}$/,
-              message: 'Phone number must be 10 digits long!',
-            },
-          ]}
-        >
-          <Input placeholder="Enter your phone number" />
-        </Form.Item>
+  label="Phone"
+  name="phone"
+  rules={[
+    { required: true, message: 'Please input your phone number!' },
+    {
+      pattern: /^\d{10}$/,
+      message: 'Phone number must be 10 digits long!',
+    },
+  ]}
+>
+  <Input placeholder="Enter your phone number" />
+</Form.Item>
+
         <Form.Item
           label="Message"
           name="message"
-          rules={[{ required: true, message: 'Please input your message!' }]}
+          rules={[{ required: true, message: 'Please enter your message!' }]}
         >
-          <Input.TextArea placeholder="Enter your message" rows={4} />
+          <Input.TextArea placeholder="Enter your message" rows={3} />
         </Form.Item>
       </Form>
     </Modal>
