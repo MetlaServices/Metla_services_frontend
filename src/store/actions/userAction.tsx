@@ -218,3 +218,22 @@ export const asyncUserLogout = (): AppThunk => async (dispatch) => {
         console.error(error);
     } 
 };
+
+
+export const submitForm = (formData: FormData): AppThunk => async () => {
+    try {
+      const response = await axios.post('/user/popupForm', formData); // Replace with your API endpoint
+      console.log('Form submitted successfully:', response.data);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
+}
+
+// export const fetchSubmitform=():AppThunk=>async()=>{
+//     try {
+//         const resposne=await axios.get('/user/fetchDetails')
+
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
