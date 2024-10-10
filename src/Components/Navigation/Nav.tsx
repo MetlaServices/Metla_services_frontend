@@ -51,11 +51,7 @@ const Nav: React.FC = () => {
     setDrawerVisible(false);
   };
 
-  const handleServiceClick = () => {
-    setDrawerVisible(false);
-  };
-
-  const handleEnquiryClick = () => {
+  const handleLinkClick = () => {
     setDrawerVisible(false);
   };
 
@@ -63,7 +59,7 @@ const Nav: React.FC = () => {
     <Menu>
       {services.map((service) => (
         <Menu.Item key={service.path}>
-          <Link to={service.path} onClick={handleServiceClick}>
+          <Link to={service.path} onClick={handleLinkClick}>
             {service.name}
           </Link>
         </Menu.Item>
@@ -75,7 +71,7 @@ const Nav: React.FC = () => {
     <Menu>
       {enquiries.map((enquiry) => (
         <Menu.Item key={enquiry.path}>
-          <Link to={enquiry.path} onClick={handleEnquiryClick}>
+          <Link to={enquiry.path} onClick={handleLinkClick}>
             {enquiry.name}
           </Link>
         </Menu.Item>
@@ -86,18 +82,16 @@ const Nav: React.FC = () => {
   return (
     <nav className="bg-stone-200 text-[black] shadow-md sticky top-0 z-50 navbar">
       {/* Info Bar */}
-    {/* Info Bar */}
-<div className="w-full bg-emerald-600 h-auto flex items-center justify-end gap-4 px-4 py-2 text-black text-xs md:text-sm">
-  <p className="flex items-center space-x-2">
-    <FaEnvelope className="text-base md:text-lg" />
-    <span>info@metlaservices.com</span>
-  </p>
-  <p className="flex items-center space-x-2">
-    <FaPhone className="text-base md:text-lg" />
-    <span>+91-9289586627</span>
-  </p>
-</div>
-
+      <div className="w-full bg-emerald-600 h-auto flex items-center justify-end gap-4 px-4 py-2 text-black text-xs md:text-sm">
+        <p className="flex items-center space-x-2">
+          <FaEnvelope className="text-base md:text-lg" />
+          <span>info@metlaservices.com</span>
+        </p>
+        <p className="flex items-center space-x-2">
+          <FaPhone className="text-base md:text-lg" />
+          <span>+91-9289586627</span>
+        </p>
+      </div>
 
       {/* Navbar */}
       <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -131,9 +125,6 @@ const Nav: React.FC = () => {
                 Enquiry <DownOutlined />
               </Button>
             </Dropdown>
-
-           
-
           </div>
 
           {/* Mobile Menu Button */}
@@ -141,6 +132,7 @@ const Nav: React.FC = () => {
             <div
               className="flex items-center justify-center w-12 h-12 text-black rounded-full cursor-pointer transition duration-300"
               onClick={() => setDrawerVisible(true)}
+              aria-label="Open menu"
             >
               <MenuOutlined className="text-2xl" />
             </div>
@@ -156,12 +148,13 @@ const Nav: React.FC = () => {
         open={drawerVisible}
         className="bg-[#003B5C] text-[#57534e] transition-transform duration-300"
         closeIcon={<CloseOutlined className="text-[#57534e]" />}
+        maskStyle={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }} // Add background overlay
       >
         <div className="space-y-4 text-[#57534e]" ref={linksRef}>
-          <Link to="/" className="text-lg font-semibold px-3 py-2 rounded-md flex items-center hover:text-yellow-500 hover:underline" onClick={handleDrawerClose}>
+          <Link to="/" className="text-lg font-semibold px-3 py-2 rounded-md flex items-center hover:text-yellow-500 hover:underline" onClick={handleLinkClick}>
             Home
           </Link>
-          <Link to="/about" className="text-lg font-semibold px-3 py-2 rounded-md flex items-center hover:text-yellow-500 hover:underline" onClick={handleDrawerClose}>
+          <Link to="/about" className="text-lg font-semibold px-3 py-2 rounded-md flex items-center hover:text-yellow-500 hover:underline" onClick={handleLinkClick}>
             About
           </Link>
           <Dropdown overlay={servicesMenu} trigger={['click']} className="relative">
@@ -170,7 +163,7 @@ const Nav: React.FC = () => {
             </Button>
           </Dropdown>
 
-          <Link to="/contact" className="text-lg font-semibold px-3 py-2 rounded-md flex items-center hover:text-yellow-500 hover:underline" onClick={handleDrawerClose}>
+          <Link to="/contact" className="text-lg font-semibold px-3 py-2 rounded-md flex items-center hover:text-yellow-500 hover:underline" onClick={handleLinkClick}>
             Contact
           </Link>
           <Dropdown overlay={enquiryMenu} trigger={['click']} className="relative">
@@ -178,7 +171,6 @@ const Nav: React.FC = () => {
               Enquiry <DownOutlined />
             </Button>
           </Dropdown>
-
         </div>
       </Drawer>
     </nav>
