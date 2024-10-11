@@ -116,8 +116,7 @@ const Footer: React.FC = () => {
                 className="social-media-icon text-white hover:text-pink-500 transition duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.2 }}
-              >
+                whileHover={{ scale: 1.2 }}>
                 <FaInstagram className="text-3xl" />
               </motion.a>
             </motion.div>

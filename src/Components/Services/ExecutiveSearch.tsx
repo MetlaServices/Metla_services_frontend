@@ -97,8 +97,8 @@ const ExecutiveSearch: React.FC = () => {
               <p className="text-sm md:text-md mb-4">
                 Recognizing the uniqueness of each search, our solutions are tailored to meet your specific needs, whether for a leadership transition, team expansion, or specialized executive expertise.
               </p>
-              <Link to="/services">
-                <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors">
+              <Link to="/contact">
+                <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors" >
                   Learn More
                 </button>
               </Link>

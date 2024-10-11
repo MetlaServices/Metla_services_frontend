@@ -50,7 +50,6 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="relative">
-      {/* Carousel */}
   <CarouselEffect/>
   <SecondComponent/>
   <HowItWorks/>

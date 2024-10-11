@@ -57,15 +57,15 @@ const Chat: React.FC = () => {
         </button>
       </a>
 
-      {/* Messages/ChatBot Button */}
+    
       <button
         onClick={toggleChat}
         className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg hover:from-purple-600 hover:to-indigo-700 transition-all"
       >
-        💬
+        💭
       </button>
 
-      {/* ChatBot Panel */}
+    
       {isChatOpen && (
         <div className="absolute bottom-16 right-0 bg-white p-4 shadow-lg rounded-lg w-80 animate-fade-in-down">
           <div className="h-64 overflow-y-auto mb-2">
