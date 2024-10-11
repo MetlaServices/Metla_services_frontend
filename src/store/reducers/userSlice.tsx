@@ -29,21 +29,21 @@ export const userSlice = createSlice({
       state.loading = true;
       state.error = null;
     },
-    otpVerificationSuccess: (state) => {
+    otpVerificationSuccess: (state:any) => {
       state.loading = false;
       state.otpVerified = true;
       state.error = null; // Clear any previous error
     },
-    otpVerificationFailure: (state, action: PayloadAction<string>) => {
+    otpVerificationFailure: (state:any, action: PayloadAction<string>) => {
       state.loading = false;
       state.error = action.payload;
     },
-    saveUser: (state, action: PayloadAction<any>) => {
+    saveUser: (state:any, action: PayloadAction<any>) => {
       state.user = action.payload;
       state.isUserAuth = true;
       localStorage.setItem('user', JSON.stringify(action.payload)); // Save the updated user data
     },
-    removeUser: (state) => {
+    removeUser: (state:any) => {
       state.user = null;
       state.isUserAuth = false;
       localStorage.clear()
