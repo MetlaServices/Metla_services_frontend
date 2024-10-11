@@ -33,15 +33,15 @@ import ViewQueries from "../Admin/Queries";
 import ViewApplications from "../Admin/Applications";
 import GetInTouch from "../Contact/GetInTouch";
 import CameraCapture from "../ChatBot/Scanner";
-import Hospital from "../ServingIndustry/IndustrySectionsFolder/Hospital";
-import HotelAndHospitality from "../ServingIndustry/IndustrySectionsFolder/HotelAndHospitality";
-import EducationTraining from "../ServingIndustry/IndustrySectionsFolder/EducationTraining";
-import Finance from "../ServingIndustry/IndustrySectionsFolder/Finance";
-import RenewableEnergy from "../ServingIndustry/IndustrySectionsFolder/RenewableEnergy";
-import Insurance from "../ServingIndustry/IndustrySectionsFolder/Insurance";
-import Ecommerce from "../ServingIndustry/IndustrySectionsFolder/Ecommerce";
-import Retail from "../ServingIndustry/IndustrySectionsFolder/Retail";
-import RealEstate from "../ServingIndustry/IndustrySectionsFolder/RealEstate";
+// import Hospital from "../ServingIndustry/IndustrySectionsFolder/Hospital";
+// import HotelAndHospitality from "../ServingIndustry/IndustrySectionsFolder/HotelAndHospitality";
+// import EducationTraining from "../ServingIndustry/IndustrySectionsFolder/EducationTraining";
+// import Finance from "../ServingIndustry/IndustrySectionsFolder/Finance";
+// import RenewableEnergy from "../ServingIndustry/IndustrySectionsFolder/RenewableEnergy";
+// import Insurance from "../ServingIndustry/IndustrySectionsFolder/Insurance";
+// import Ecommerce from "../ServingIndustry/IndustrySectionsFolder/Ecommerce";
+// import Retail from "../ServingIndustry/IndustrySectionsFolder/Retail";
+// import RealEstate from "../ServingIndustry/IndustrySectionsFolder/RealEstate";
 
 const Routing: React.FC = () => {
   const { admin, isAuth } = useAppSelector((state) => state.admin);
@@ -55,7 +55,7 @@ const Routing: React.FC = () => {
       <Route path="/enquiries/employer" element={<ContactUs />} />
       <Route path="/enquiries/employee" element={<GetInTouch />} />
 
-      
+{/*       
       <Route path="/hospital" element={<Hospital />} />
         <Route  path="/hotel-hospitality"  element={<HotelAndHospitality />}  />
         <Route  path="/education-training"  element={<EducationTraining />}   />
@@ -64,7 +64,7 @@ const Routing: React.FC = () => {
         <Route path="/insurance" element={<Insurance />} />
         <Route path="/ecommerce" element={<Ecommerce />} />
         <Route path="/retail" element={<Retail />} />
-        <Route path="/real-estate" element={<RealEstate />} />
+        <Route path="/real-estate" element={<RealEstate />} /> */}
 
 
       <Route path="/services">
