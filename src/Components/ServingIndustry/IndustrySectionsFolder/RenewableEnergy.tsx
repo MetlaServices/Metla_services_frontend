@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 import { FaSolarPanel, FaWind, FaBatteryHalf, FaUsers, FaHandshake } from 'react-icons/fa';
 
