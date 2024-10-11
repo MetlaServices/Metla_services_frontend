@@ -96,37 +96,38 @@ export const SecondComponent: React.FC = () => {
           <h2 className="text-4xl font-bold text-center mb-8 text-[#147971]">Our Services</h2>
           <div className="flex flex-wrap justify-center gap-8">
             {cardData.map((card, index) => (
-              <Link
-                to={`/services/${card.link}`} // Wrap entire card with Link
-                key={index}
+              <div 
+                key={index} 
                 ref={(el) => (cardsRef.current[index] = el!)} // Attach ref for GSAP animations
                 className="relative rounded-lg overflow-hidden shadow-lg bg-white w-full sm:w-1/2 md:w-1/3 lg:w-1/4 group"
               >
-                {/* Card Image */}
-                <div className="relative overflow-hidden">
-                  <img
-                    src={card.imgSrc}
-                    alt={card.title}
-                    className="w-full h-48 object-cover transition-transform duration-500 ease-in-out transform group-hover:scale-110"
-                  />
-                  {/* Overlay */}
-                  <div className="absolute inset-0 flex flex-col justify-center items-center p-4 bg-[#147971] bg-opacity-70 transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                    <h2 className="text-xl font-semibold mb-2 text-white">
-                      {card.title}
-                    </h2>
-                    <h3 className="text-gray-200 mb-4 text-sm text-center">
-                      {card.description}
-                    </h3>
-                    <span className="text-white font-semibold text-sm bg-[#fcbc04] py-2 px-4 rounded-full">
-                      Read More
-                    </span>
+                <Link to={`/services/${card.link}`} className="block h-full">
+                  {/* Card Image */}
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={card.imgSrc}
+                      alt={card.title}
+                      className="w-full h-48 object-cover transition-transform duration-500 ease-in-out transform group-hover:scale-110"
+                    />
+                    {/* Overlay */}
+                    <div className="absolute inset-0 flex flex-col justify-center items-center p-4 bg-[#147971] bg-opacity-70 transform -translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                      <h2 className="text-xl font-semibold mb-2 text-white">
+                        {card.title}
+                      </h2>
+                      <h3 className="text-gray-200 mb-4 text-sm text-center">
+                        {card.description}
+                      </h3>
+                      <span className="text-white font-semibold text-sm bg-[#fcbc04] py-2 px-4 rounded-full">
+                        Read More
+                      </span>
+                    </div>
                   </div>
-                </div>
-                {/* Card Title */}
-                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white p-2 text-center">
-                  <h2 className="text-lg font-bold">{card.title}</h2>
-                </div>
-              </Link>
+                  {/* Card Title */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white p-2 text-center">
+                    <h2 className="text-lg font-bold">{card.title}</h2>
+                  </div>
+                </Link>
+              </div>
             ))}
           </div>
         </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from 'antd';
 import { FaUserTie, FaHandshake, FaHandHoldingUsd } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import PermanentStaffing from '../../assets/Services/permanent_staffing.webp';
