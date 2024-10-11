@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from 'antd';
 import { FaUserTie, FaHandshake, FaHandHoldingUsd } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import PermanentStaffing from '../../assets/Services/permanent_staffing.webp';
@@ -36,9 +35,7 @@ const PermanentStaffingSolution: React.FC = () => {
           >
             Our permanent staffing solutions help you build a team that drives success.
           </motion.p>
-          <Button type="primary" size="large">
-            Get Started
-          </Button>
+      <a href='/contact'   className="bg-cyan-500 text-white py-3 px-6 rounded-lg font-semibold ">get stared</a>  
         </div>
       </section>
 
@@ -188,7 +185,7 @@ const PermanentStaffingSolution: React.FC = () => {
               <p>Our pricing is based on the complexity of your staffing needs and the level of service required.</p>
             </div>
           </motion.div>
-          {/* Add more FAQ items as needed */}
+       
         </div>
       </section>
     </div>

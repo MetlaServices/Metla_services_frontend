@@ -1,153 +1,111 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Button, Input, Spin } from 'antd';
-import { MessageOutlined, SendOutlined, WhatsAppOutlined, PhoneOutlined } from '@ant-design/icons';
+import React, { useState } from "react";
 
+// Define a message type for the chatbot
 interface Message {
-    sender: 'user' | 'bot';
-    text: string;
-}
-
-interface RasaResponse {
-    text: string;
+  sender: 'user' | 'bot';
+  text: string;
 }
 
 const Chat: React.FC = () => {
-    const [messages, setMessages] = useState<Message[]>([]);
-    const [input, setInput] = useState<string>('');
-    const [isTyping, setIsTyping] = useState<boolean>(false);
-    const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isChatOpen, setIsChatOpen] = useState<boolean>(false);
+  const [input, setInput] = useState<string>('');
+  const [messages, setMessages] = useState<Message[]>([
+    { sender: 'bot', text: 'Hey! How can I help you today?' },
+    { sender: 'bot', text: 'Ask me anything casual!' }
+  ]);
 
-    useEffect(() => {
-        // Initial suggestions
-        if (messages.length === 0) {
-            const initialSuggestions: Message[] = [
-                { sender: 'bot', text: 'Hi! How can I assist you today?' },
-                { sender: 'bot', text: 'You can ask about the weather or say goodbye!' },
-            ];
-            setMessages(initialSuggestions);
+  const toggleChat = () => {
+    setIsChatOpen(!isChatOpen);
+  };
+
+  const handleSend = () => {
+    if (input.trim() !== '') {
+      setMessages((prevMessages) => [...prevMessages, { sender: 'user', text: input }]);
+      setInput('');
+
+      // Simulate bot response with different answers
+      setTimeout(() => {
+        let botResponse: string;
+        if (input.toLowerCase().includes('joke')) {
+          botResponse = 'Why don’t scientists trust atoms? Because they make up everything!';
+        } else if (input.toLowerCase().includes('weather')) {
+          botResponse = 'It’s sunny and bright here!';
+        } else if (input.toLowerCase().includes('hobbies')) {
+          botResponse = 'I love chatting and making new friends!';
+        } else {
+          botResponse = 'That’s interesting! Tell me more!';
         }
-    }, [messages]);
 
-    const handleSend = async (messageText: string) => {
-        if (messageText.trim()) {
-            const userMessage: Message = { sender: 'user', text: messageText };
-            setMessages((prevMessages) => [...prevMessages, userMessage]);
-            setInput('');
+        setMessages((prevMessages) => [...prevMessages, { sender: 'bot', text: botResponse }]);
+      }, 1000);
+    }
+  };
 
-            setIsTyping(true);
-            try {
-                const response = await axios.post<RasaResponse[]>('http://localhost:3000/chat', {
-                    message: messageText,
-                    sender: 'user',
-                });
+  return (
+    <div className="fixed bottom-4 right-4 z-50 flex flex-col items-center space-y-2">
+      {/* Call Button */}
+      <a href="tel:+919289586627">
+        <button className="bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg hover:bg-blue-600 transition-all">
+          📞
+        </button>
+      </a>
 
-                setTimeout(() => {
-                    const rasaMessages: Message[] = response.data.map((msg) => ({ sender: 'bot', text: msg.text }));
-                    setMessages((prevMessages) => [...prevMessages, ...rasaMessages]);
-                    setIsTyping(false);
-                }, 1000);
-            } catch (error) {
-                console.error('Error communicating with Rasa:', error);
-                setIsTyping(false);
-            }
-        }
-    };
+      {/* WhatsApp Button */}
+      <a href="https://wa.me/919289586627" target="_blank" rel="noopener noreferrer">
+        <button className="bg-green-500 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg hover:bg-green-600 transition-all">
+          💬
+        </button>
+      </a>
 
-    const handleSuggestionClick = (suggestion: string) => {
-        handleSend(suggestion);
-    };
+    
+      <button
+        onClick={toggleChat}
+        className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg hover:from-purple-600 hover:to-indigo-700 transition-all"
+      >
+        💭
+      </button>
 
-    const toggleChat = () => {
-        setIsOpen(!isOpen);
-    };
-
-    return (
-        <div className="fixed bottom-4 right-4 z-50 flex flex-col items-center">
-            <Button
-                shape="circle"
-                icon={<PhoneOutlined style={{ fontSize: '36px' }} />}
-                size="large"
-                onClick={() => window.open('tel:+919289586627')}  // Replace with your phone number
-                className="bg-blue-500 text-white shadow-lg hover:shadow-xl transition-all duration-300 mb-2"
-                style={{ width: '60px', height: '60px' }}
-            />
-
-            <a
-                href="https://wa.me/9289586627"  // Replace 'your_number_here' with the actual number
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mb-2"
-            >
-                <Button
-                    shape="circle"
-                    icon={<WhatsAppOutlined style={{ fontSize: '36px' }} />}
-                    size="large"
-                    className="bg-green-500 text-white shadow-lg hover:shadow-xl transition-all duration-300"
-                    style={{ width: '60px', height: '60px' }}
-                />
-            </a>
-
-            <Button
-                shape="circle"
-                icon={<MessageOutlined style={{ fontSize: '36px' }} />}
-                size="large"
-                onClick={toggleChat}
-                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg hover:shadow-xl transition-all duration-300"
-                style={{ width: '60px', height: '60px' }}
-            />
-
-            {isOpen && (
-                <div className="bg-white shadow-lg rounded-lg p-4 w-80 animate__animated animate__fadeIn" style={{ borderRadius: '12px', overflow: 'hidden' }}>
-                    <div className="h-64 overflow-y-auto mb-2">
-                        {messages.map((msg, index) => (
-                            <div key={index} className={`mb-2 ${msg.sender === 'user' ? 'text-right' : 'text-left'}`}>
-                                <div className={`inline-block p-3 rounded-lg transition-transform duration-200 ${msg.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'}`}>
-                                    {msg.text}
-                                </div>
-                            </div>
-                        ))}
-                        {isTyping && (
-                            <div className="flex items-center">
-                                <Spin size="small" className="mr-2" />
-                                <div className="bg-gray-200 inline-block p-2 rounded-lg">Typing...</div>
-                            </div>
-                        )}
-                    </div>
-
-                    {/* Suggestions section */}
-                    <div className="grid grid-cols-1 gap-2 mb-2">
-                        <Button onClick={() => handleSuggestionClick('What\'s the weather like?')} className="bg-blue-100 hover:bg-blue-200 rounded-lg transition-all duration-200">
-                            What's the weather like?
-                        </Button>
-                        <Button onClick={() => handleSuggestionClick('Tell me a joke!')} className="bg-blue-100 hover:bg-blue-200 rounded-lg transition-all duration-200">
-                            Tell me a joke!
-                        </Button>
-                        <Button onClick={() => handleSuggestionClick('Goodbye!')} className="bg-blue-100 hover:bg-blue-200 rounded-lg transition-all duration-200">
-                            Goodbye!
-                        </Button>
-                    </div>
-
-                    <div className="flex items-center mt-2">
-                        <Input
-                            value={input}
-                            onChange={(e) => setInput(e.target.value)}
-                            onPressEnter={() => handleSend(input)}
-                            placeholder="Type your message..."
-                            className="rounded-lg flex-1 mr-2 border-2 border-blue-300"
-                        />
-                        <Button
-                            type="primary"
-                            onClick={() => handleSend(input)}
-                            className="rounded-lg p-2"
-                            icon={<SendOutlined />}
-                            style={{ backgroundColor: '#4CAF50', borderColor: '#4CAF50' }}
-                        />
-                    </div>
+    
+      {isChatOpen && (
+        <div className="absolute bottom-16 right-0 bg-white p-4 shadow-lg rounded-lg w-80 animate-fade-in-down">
+          <div className="h-64 overflow-y-auto mb-2">
+            {messages.map((msg, index) => (
+              <div key={index} className={`mb-2 ${msg.sender === 'user' ? 'text-right' : 'text-left'}`}>
+                <div className={`inline-block p-2 rounded-lg ${msg.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'}`}>
+                  {msg.text}
                 </div>
-            )}
+              </div>
+            ))}
+          </div>
+
+          <div className="flex items-center">
+            <input
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyPress={(e) => e.key === 'Enter' && handleSend()}
+              className="flex-1 border border-gray-300 rounded-lg p-2 mr-2"
+              placeholder="Type your message..."
+            />
+            <button onClick={handleSend} className="bg-blue-500 text-white px-4 py-2 rounded-lg">
+              Send
+            </button>
+          </div>
+
+          <div className="mt-2 space-y-1">
+            <button onClick={() => setInput('Tell me a joke!')} className="bg-gray-200 w-full py-2 rounded-lg">
+              Tell me a joke!
+            </button>
+            <button onClick={() => setInput('How is the weather today?')} className="bg-gray-200 w-full py-2 rounded-lg">
+              How is the weather today?
+            </button>
+            <button onClick={() => setInput('What are your hobbies?')} className="bg-gray-200 w-full py-2 rounded-lg">
+              What are your hobbies?
+            </button>
+          </div>
         </div>
-    );
+      )}
+    </div>
+  );
 };
 
 export default Chat;

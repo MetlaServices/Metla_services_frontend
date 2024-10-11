@@ -4,10 +4,9 @@ import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
-// Import images
-import leftImage from '../../assets/faqs.webp'; // Adjust path as necessary
 
-// FAQ Data
+import leftImage from '../../assets/faqs.webp'; 
+
 const faqs = [
   {
     question: 'What services does Metla Services provide?',
@@ -39,7 +38,7 @@ const faqs = [
   }
 ];
 
-// GSAP Animation Variants
+
 gsap.registerPlugin(ScrollTrigger);
 
 const FAQ: React.FC = () => {
@@ -64,7 +63,7 @@ const FAQ: React.FC = () => {
     );
   }, []);
 
-  // Framer Motion Animation Variants for Collapse
+
   const panelVariants: Variants = {
     open: { opacity: 1, height: 'auto', overflow: 'hidden' },
     closed: { opacity: 0, height: 0, overflow: 'hidden' },
