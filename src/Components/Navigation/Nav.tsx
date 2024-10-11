@@ -89,7 +89,7 @@ const Nav: React.FC = () => {
         </p>
         <p className="flex items-center space-x-2">
           <FaPhone className="text-base md:text-lg" />
-          <span>+91-9289586627</span>
+          <span>+919289586627</span>
         </p>
       </div>
 
