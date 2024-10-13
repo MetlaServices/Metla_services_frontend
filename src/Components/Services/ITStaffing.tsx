@@ -71,10 +71,10 @@ const ITStaffingSolutions: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            IT Staffing Solutions
+            Best IT Staffing Solution Providers in India 
           </motion.h1>
           <p className="text-base md:text-lg text-gray-600 mt-4">
-            At Metla Services, our IT Staffing Solutions are driven by a commitment to strategic talent acquisition. We understand that the success of IT projects relies heavily on the expertise and proficiency of the individuals involved.
+            Best IT Staffing Solution Providers in India , our IT Staffing Solutions are driven by a commitment to strategic talent acquisition. We understand that the success of IT projects relies heavily on the expertise and proficiency of the individuals involved.
           </p>
         </header>
 
