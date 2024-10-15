@@ -79,7 +79,7 @@ const ContractStaffing: React.FC = () => {
         {/* Header Section */}
         <header className="text-center mb-12 header-text">
           <h1 className="text-5xl font-extrabold text-gray-900">
-            Contract Staffing Solutions
+            Best Contract Staffing Company in India
           </h1>
           <p className="text-lg text-gray-600 mt-4">
             Discover how our tailored staffing solutions can meet your temporary and contract staffing needs with ease.
