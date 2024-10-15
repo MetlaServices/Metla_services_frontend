@@ -176,7 +176,7 @@ const ContractStaffing: React.FC = () => {
         {/* Client-Centric Approach Section */}
         <div className="bg-white p-8 rounded-lg shadow-lg mb-12">
           <h2 className="text-3xl font-semibold text-gray-800 mb-6">
-            Client-Centric Approach for Lasting Partnerships
+           Temporary Hiring Solution is just Single Click Away
           </h2>
           <p className="text-gray-700 mb-4">
             At Metla Services, we go beyond being a service provider; we become your strategic partner in success. Our client-centric approach is built on transparent communication, responsiveness, and a deep understanding of your business goals. We are committed to ensuring that our Contract Staffing Solutions seamlessly align with your strategic objectives, building lasting partnerships that contribute to your organizational growth.
