@@ -7,12 +7,12 @@ import Logo from '../../assets/Logo/logo.svg';
 import gsap from 'gsap';
 
 const services = [
-  { name: 'Contract Staffing', path: '/services/contract-staffing' },
-  { name: 'IT Staffing', path: '/services/it-staffing' },
+  { name: 'Contract Staffing', path: '/services/Best contract-staffing company in India' },
+  { name: 'IT Staffing', path: '/services/Best IT-staffing Company in India' },
   { name: 'Executive Search', path: '/services/executive-search' },
   { name: 'Software Solutions', path: '/services/software-solutions' },
-  { name: 'Talent Management', path: '/services/talent-management' },
-  { name: 'Permanent Staffing', path: '/services/permanent-staffing' },
+  { name: 'Talent Management', path: '/services/Top talent-management Company in India' },
+  { name: 'Permanent Staffing', path: '/services/Hire permanent-staffing Company in India' },
 ];
 
 const enquiries = [
