@@ -68,8 +68,8 @@ const Routing: React.FC = () => {
 
 
       <Route path="/services">
-        <Route path="contract-staffing" element={<ContractStaffing />} />
-        <Route path="it-staffing" element={<ITStaffingSolutions />} />
+        <Route path="Best contract-staffing company in India" element={<ContractStaffing />} />
+        <Route path="Best IT-staffing Company in India" element={<ITStaffingSolutions />} />
         <Route path="executive-search" element={<ExecutiveSearch />} />
         <Route path="software-solutions" element={<SoftwareSolutions />} />
         <Route path="outplacement" element={<GlobalPlacements />} />
