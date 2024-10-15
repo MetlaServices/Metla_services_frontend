@@ -35,7 +35,7 @@ function App() {
       <Routing />
       <Chat />
       <Footer />
-      <PopupForm visible={isPopupVisible} onClose={handlePopupClose} />
+      {/* <PopupForm visible={isPopupVisible} onClose={handlePopupClose} /> */}
     </>
   );
 }
