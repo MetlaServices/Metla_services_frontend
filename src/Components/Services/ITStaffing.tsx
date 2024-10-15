@@ -7,7 +7,7 @@ import ITStaffingImage from '../../assets/Services/IT_Staffing.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Best IT Staffing Solutions in India: React.FC = () => {
+const ITStaffing: React.FC = () => {
   // Refs for elements to be animated with GSAP
   const imageSectionRef = useRef<HTMLDivElement>(null);
   const featuresRef = useRef<HTMLDivElement>(null);
@@ -164,4 +164,4 @@ const Best IT Staffing Solutions in India: React.FC = () => {
   );
 };
 
-export default ITStaffingSolutions;
+export default ITStaffing;
