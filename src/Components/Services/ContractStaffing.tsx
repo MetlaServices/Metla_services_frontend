@@ -96,7 +96,7 @@ const ContractStaffing: React.FC = () => {
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg text-white p-6 overlay-text">
             <div>
               <h2 className="text-3xl font-bold mb-4">
-                Tailored Solutions for Your Staffing Needs
+           Temporary Hiring Solution is just Single Click Away
               </h2>
               <p className="text-lg">
                 We provide customized staffing solutions that align with your business goals and project requirements.
