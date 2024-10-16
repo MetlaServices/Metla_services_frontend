@@ -76,7 +76,7 @@ const Routing: React.FC = () => {
         <Route path="talent-management" element={<TalentAcquisition />} />
         <Route path="hr-consultancy" element={<HRConsulting />} />
         <Route
-          path="permanent-staffing"
+          path="Hire permanent-staffing Company in India"
           element={<PermanentStaffingSolution />}
         />
       </Route>
