@@ -83,38 +83,14 @@
 // export default HowItWorks;
 
 import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer'; 
+
 import Logo from '../../assets/Logo/logo.svg';
 import jobicon from '../../assets/how it works/job icon.jpg'
 import registericon from '../../assets/how it works/register icon.jpg'
 import searchdreamjob from '../../assets/how it works/searchdrean job icon.jpg'
 import updateprofileicon from '../../assets/how it works/updateprofile icon.jpg'
-import { FaUserPlus, FaEdit, FaSearch, FaClipboardCheck } from 'react-icons/fa';
 
 // Array for main steps
-const steps = [
-  {
-    icon: <FaUserPlus className="text-4xl text-blue-500" />,
-    title: 'Register Account',
-    description: 'Register by filling our simple form.',
-  },
-  {
-    icon: <FaEdit className="text-4xl text-green-500" />,
-    title: 'Update Profile',
-    description: 'Update your complete latest details.',
-  },
-  {
-    icon: <FaSearch className="text-4xl text-orange-500" />,
-    title: 'Search Dream Job',
-    description: 'Search various employers using filters.',
-  },
-  {
-    icon: <FaClipboardCheck className="text-4xl text-purple-500" />,
-    title: 'Apply For Job',
-    description: 'Apply for your dream job and get hired.',
-  },
-];
 
 // New array for images, titles, and content
 const featureSteps = [
@@ -140,24 +116,7 @@ const featureSteps = [
   },
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0, x: -100 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: 'spring',
-      stiffness: 50,
-      duration: 0.6,
-      staggerChildren: 0.3,
-    },
-  },
-};
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
 
 const HowItWorks: React.FC = () => {
   // const { ref, inView } = useInView({
