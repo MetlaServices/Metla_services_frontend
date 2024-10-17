@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-=======
-// src/pages/HomePage.tsx
->>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
 import React, { useEffect } from 'react';
 import 'antd/dist/reset.css';
 import { gsap } from 'gsap';

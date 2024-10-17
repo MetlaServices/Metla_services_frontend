@@ -79,11 +79,7 @@ const ContractStaffing: React.FC = () => {
         {/* Header Section */}
         <header className="text-center mb-12 header-text">
           <h1 className="text-5xl font-extrabold text-gray-900">
-<<<<<<< HEAD
             Contract Staffing Solutions
-=======
-            Best Contract Staffing Company in India
->>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
           </h1>
           <p className="text-lg text-gray-600 mt-4">
             Discover how our tailored staffing solutions can meet your temporary and contract staffing needs with ease.
@@ -100,11 +96,7 @@ const ContractStaffing: React.FC = () => {
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg text-white p-6 overlay-text">
             <div>
               <h2 className="text-3xl font-bold mb-4">
-<<<<<<< HEAD
                 Tailored Solutions for Your Staffing Needs
-=======
-           Temporary Hiring Solution is just Single Click Away
->>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
               </h2>
               <p className="text-lg">
                 We provide customized staffing solutions that align with your business goals and project requirements.
@@ -184,11 +176,7 @@ const ContractStaffing: React.FC = () => {
         {/* Client-Centric Approach Section */}
         <div className="bg-white p-8 rounded-lg shadow-lg mb-12">
           <h2 className="text-3xl font-semibold text-gray-800 mb-6">
-<<<<<<< HEAD
             Client-Centric Approach for Lasting Partnerships
-=======
-           Temporary Hiring Solution is just Single Click Away
->>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
           </h2>
           <p className="text-gray-700 mb-4">
             At Metla Services, we go beyond being a service provider; we become your strategic partner in success. Our client-centric approach is built on transparent communication, responsiveness, and a deep understanding of your business goals. We are committed to ensuring that our Contract Staffing Solutions seamlessly align with your strategic objectives, building lasting partnerships that contribute to your organizational growth.

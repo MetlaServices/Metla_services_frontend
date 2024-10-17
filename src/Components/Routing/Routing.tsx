@@ -33,7 +33,6 @@ import ViewQueries from "../Admin/Queries";
 import ViewApplications from "../Admin/Applications";
 import GetInTouch from "../Contact/GetInTouch";
 import CameraCapture from "../ChatBot/Scanner";
-<<<<<<< HEAD
 import Hospital from "../ServingIndustry/IndustrySectionsFolder/Hospital";
 import HotelAndHospitality from "../ServingIndustry/IndustrySectionsFolder/HotelAndHospitality";
 import EducationTraining from "../ServingIndustry/IndustrySectionsFolder/EducationTraining";
@@ -60,17 +59,6 @@ import PayrollOutsource from "../Services/PayrollOutsource";
 import TemporaryManpower from "../Services/TemporaryManpower";
 import IndustryWise from "../Services/IndustryWise";
 import Navblog from "../Navblog/Navblog";
-=======
-// import Hospital from "../ServingIndustry/IndustrySectionsFolder/Hospital";
-// import HotelAndHospitality from "../ServingIndustry/IndustrySectionsFolder/HotelAndHospitality";
-// import EducationTraining from "../ServingIndustry/IndustrySectionsFolder/EducationTraining";
-// import Finance from "../ServingIndustry/IndustrySectionsFolder/Finance";
-// import RenewableEnergy from "../ServingIndustry/IndustrySectionsFolder/RenewableEnergy";
-// import Insurance from "../ServingIndustry/IndustrySectionsFolder/Insurance";
-// import Ecommerce from "../ServingIndustry/IndustrySectionsFolder/Ecommerce";
-// import Retail from "../ServingIndustry/IndustrySectionsFolder/Retail";
-// import RealEstate from "../ServingIndustry/IndustrySectionsFolder/RealEstate";
->>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
 
 const Routing: React.FC = () => {
   const { admin, isAuth } = useAppSelector((state) => state.admin);
@@ -84,17 +72,12 @@ const Routing: React.FC = () => {
       <Route path="/enquiries/employer" element={<ContactUs />} />
       <Route path="/enquiries/employee" element={<GetInTouch />} />
 
-<<<<<<< HEAD
 
       <Route path="/navblog" element={<Navblog/>} />
 
 
       
         <Route path="/hospital" element={<Hospital />} />
-=======
-{/*       
-      <Route path="/hospital" element={<Hospital />} />
->>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
         <Route  path="/hotel-hospitality"  element={<HotelAndHospitality />}  />
         <Route  path="/education-training"  element={<EducationTraining />}   />
         <Route path="/finance" element={<Finance />} />
@@ -102,7 +85,6 @@ const Routing: React.FC = () => {
         <Route path="/insurance" element={<Insurance />} />
         <Route path="/ecommerce" element={<Ecommerce />} />
         <Route path="/retail" element={<Retail />} />
-<<<<<<< HEAD
         <Route path="/real-estate" element={<RealEstate />} /> 
 
         <Route path="/bfsi" element={<BFSI/>} />
@@ -128,20 +110,11 @@ const Routing: React.FC = () => {
       <Route path="/services">
         <Route path="contract-staffing" element={<ContractStaffing />} />
         <Route path="it-staffing" element={<ITStaffingSolutions />} />
-=======
-        <Route path="/real-estate" element={<RealEstate />} /> */}
-
-
-      <Route path="/services">
-        <Route path="Best contract-staffing company in India" element={<ContractStaffing />} />
-        <Route path="Best IT-staffing Company in India" element={<ITStaffingSolutions />} />
->>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
         <Route path="executive-search" element={<ExecutiveSearch />} />
         <Route path="software-solutions" element={<SoftwareSolutions />} />
         <Route path="outplacement" element={<GlobalPlacements />} />
         <Route path="talent-management" element={<TalentAcquisition />} />
         <Route path="hr-consultancy" element={<HRConsulting />} />
-<<<<<<< HEAD
         <Route path="bulk-hiring" element={<BulkHiring/>} />
         <Route path="payroll-outsource" element={<PayrollOutsource/>} />
         <Route path="temporary-manpower" element={<TemporaryManpower/>} />
@@ -149,10 +122,6 @@ const Routing: React.FC = () => {
     
         <Route
           path="permanent-staffing"
-=======
-        <Route
-          path="Hire permanent-staffing Company in India"
->>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
           element={<PermanentStaffingSolution />}
         />
       </Route>

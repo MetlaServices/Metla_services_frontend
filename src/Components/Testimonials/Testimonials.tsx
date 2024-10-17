@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // import React, { useEffect } from 'react';
 // import { motion } from 'framer-motion';
 // import { gsap } from 'gsap';
@@ -74,15 +73,6 @@
 // export default Testimonials;
 
 import React from 'react';
-=======
-import React, { useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { gsap } from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-
-// Register GSAP plugins
-gsap.registerPlugin(ScrollTrigger);
->>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
 
 // Testimonials Data
 const testimonials = [
@@ -100,7 +90,6 @@ const testimonials = [
   }
 ];
 
-<<<<<<< HEAD
 const Testimonials: React.FC = () => {
   return (
     <div className="testimonial-section p-8 bg-gradient-to-br from-blue-50 to-blue-100 h-auto">
@@ -115,50 +104,6 @@ const Testimonials: React.FC = () => {
             <p className="text-gray-600 mb-4 leading-relaxed italic">{testimonial.feedback}</p>
             <h4 className="text-xl font-semibold text-[#005f73]">{testimonial.name}</h4>
           </div>
-=======
-// Animation Variants
-const testimonialVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0 }
-};
-
-const Testimonials: React.FC = () => {
-  useEffect(() => {
-    gsap.fromTo(
-      '.testimonial-card',
-      { opacity: 0, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        stagger: 0.3,
-        scrollTrigger: {
-          trigger: '.testimonial-section',
-          start: 'top 80%',
-          end: 'bottom top',
-          scrub: 1,
-        }
-      }
-    );
-  }, []);
-
-  return (
-    <div className="testimonial-section p-6 bg-gray-100 h-auto">
-      <h2 className="text-4xl font-extrabold text-center mb-12 text-[#147971]">Words From Customers</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {testimonials.map((testimonial, index) => (
-          <motion.div
-            key={index}
-            className="testimonial-card bg-white shadow-lg rounded-lg p-6 border-l-4 border-blue-500"
-            variants={testimonialVariants}
-            initial="hidden"
-            animate="visible"
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-          >
-            <h3 className="text-gray-700 mb-4">{testimonial.feedback}</h3>
-            <h4 className="text-xl font-semibold text-blue-600">{testimonial.name}</h4>
-          </motion.div>
->>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
         ))}
       </div>
     </div>
