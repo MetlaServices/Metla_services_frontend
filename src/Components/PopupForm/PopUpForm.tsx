@@ -25,7 +25,7 @@ const PopupForm: React.FC<PopupFormProps> = ({ visible, onClose, setIsFormFilled
       message.success('Form submitted successfully!');
 
       setIsFormFilled(true); // Set form filled state to true
-      form.resetFields();
+      form.resetFields(); // Reset form fields
       onClose(); // Close the popup after submission
     } catch (error) {
       console.error('Submission Failed:', error);
@@ -41,10 +41,10 @@ const PopupForm: React.FC<PopupFormProps> = ({ visible, onClose, setIsFormFilled
       className="rounded-lg"
       centered
       width={250} // Reduce width of the modal
-      footer={null} 
+      footer={null}
     >
-      <Form 
-        form={form} 
+      <Form
+        form={form}
         layout="vertical"
         size="small" // Make the form compact
         style={{ margin: 0 }} // Remove any external margin
@@ -84,7 +84,7 @@ const PopupForm: React.FC<PopupFormProps> = ({ visible, onClose, setIsFormFilled
           <Input placeholder="Phone" />
         </Form.Item>
       </Form>
-      
+
       {/* Custom footer buttons */}
       <div className="flex justify-end mt-2">
         <Button onClick={onClose} size="small" className="mr-2">Cancel</Button>
