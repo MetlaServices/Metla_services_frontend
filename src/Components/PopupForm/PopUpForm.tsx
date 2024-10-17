@@ -6,9 +6,10 @@ import { submitForm } from '../../store/actions/userAction';
 interface PopupFormProps {
   visible: boolean;
   onClose: () => void;
+  setIsFormFilled: (filled: boolean) => void; // Add this prop
 }
 
-const PopupForm: React.FC<PopupFormProps> = ({ visible, onClose }) => {
+const PopupForm: React.FC<PopupFormProps> = ({ visible, onClose, setIsFormFilled }) => {
   const [form] = Form.useForm();
   const dispatch = useAppDispatch();
 
@@ -23,6 +24,7 @@ const PopupForm: React.FC<PopupFormProps> = ({ visible, onClose }) => {
       // Show success message
       message.success('Form submitted successfully!');
 
+      setIsFormFilled(true); // Set form filled state to true
       form.resetFields();
       onClose(); // Close the popup after submission
     } catch (error) {
