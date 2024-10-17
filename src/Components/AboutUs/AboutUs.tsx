@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import { Card, Col, Row } from 'antd';
 // import { motion } from 'framer-motion';
 // import 'antd/dist/reset.css';
@@ -128,6 +129,8 @@
 
 
 
+=======
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
 import { Card, Col, Row } from 'antd';
 import { motion } from 'framer-motion';
 import 'antd/dist/reset.css';
@@ -176,6 +179,7 @@ const cardContent = [
 
 const AboutUsPage = () => {
   return (
+<<<<<<< HEAD
     <div className="bg-gradient-to-b from-gray-100 to-gray-300 py-16">
       <div className="container mx-auto px-6">
         {/* Header Section */}
@@ -183,12 +187,41 @@ const AboutUsPage = () => {
           <div className="text-center mb-10">
             <motion.h2
               className="text-5xl font-extrabold mb-6 text-gray-800"
+=======
+    <div className="bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        {/* Carousel Section */}
+        <div className="relative w-full h-96 overflow-hidden mb-12 rounded-lg shadow-lg">
+          <img
+            src={introductionImage}
+            alt="Introduction"
+            className="w-full h-full object-cover rounded-lg"
+          />
+          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 rounded-lg">
+            <motion.p
+              className="text-4xl font-extrabold text-white text-center px-6"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, type: 'spring', stiffness: 120 }}
+            >
+              Transforming Visions into Workforce Realities
+            </motion.p>
+          </div>
+        </div>
+
+        {/* Cards Section */}
+        <section className="mb-12">
+          <div className="text-center mb-8">
+            <motion.h2
+              className="text-4xl font-bold mb-4 text-gray-800"
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
               initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
             >
               About Us
             </motion.h2>
+<<<<<<< HEAD
             <motion.p
               className="text-lg text-gray-600 max-w-2xl mx-auto"
               initial={{ opacity: 0 }}
@@ -238,6 +271,42 @@ const AboutUsPage = () => {
               </Col>
             ))}
           </Row>
+=======
+          </div>
+          <Row gutter={16}>
+  {cardContent.map((card, index) => (
+    <Col xs={24} sm={12} md={8} lg={6} xl={8} key={index}>
+      <motion.div
+        className="bg-white rounded-lg shadow-lg overflow-hidden mb-6 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl"
+      >
+        <Card
+          cover={
+            <img
+              alt={card.title}
+              src={card.image}
+              className="w-full h-40 object-cover"
+            />
+          }
+        >
+          <Card.Meta
+            title={
+              <h3 className="text-xl font-semibold text-gray-800 text-center">
+                {card.title}
+              </h3>
+            }
+            description={
+              <p className="text-base text-gray-600 text-center">
+                {card.description}
+              </p>
+            }
+          />
+        </Card>
+      </motion.div>
+    </Col>
+  ))}
+</Row>
+
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
         </section>
       </div>
     </div>
@@ -245,4 +314,7 @@ const AboutUsPage = () => {
 };
 
 export default AboutUsPage;
+<<<<<<< HEAD
 
+=======
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc

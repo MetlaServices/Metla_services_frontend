@@ -6,9 +6,16 @@ import { submitForm } from '../../store/actions/userAction';
 interface PopupFormProps {
   visible: boolean;
   onClose: () => void;
+<<<<<<< HEAD
 }
 
 const PopupForm: React.FC<PopupFormProps> = ({ visible, onClose }) => {
+=======
+  setIsFormFilled: (filled: boolean) => void; // Add this prop
+}
+
+const PopupForm: React.FC<PopupFormProps> = ({ visible, onClose, setIsFormFilled }) => {
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
   const [form] = Form.useForm();
   const dispatch = useAppDispatch();
 
@@ -23,7 +30,12 @@ const PopupForm: React.FC<PopupFormProps> = ({ visible, onClose }) => {
       // Show success message
       message.success('Form submitted successfully!');
 
+<<<<<<< HEAD
       form.resetFields();
+=======
+      setIsFormFilled(true); // Set form filled state to true
+      form.resetFields(); // Reset form fields
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
       onClose(); // Close the popup after submission
     } catch (error) {
       console.error('Submission Failed:', error);
@@ -39,10 +51,17 @@ const PopupForm: React.FC<PopupFormProps> = ({ visible, onClose }) => {
       className="rounded-lg"
       centered
       width={250} // Reduce width of the modal
+<<<<<<< HEAD
       footer={null} 
     >
       <Form 
         form={form} 
+=======
+      footer={null}
+    >
+      <Form
+        form={form}
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
         layout="vertical"
         size="small" // Make the form compact
         style={{ margin: 0 }} // Remove any external margin
@@ -82,7 +101,11 @@ const PopupForm: React.FC<PopupFormProps> = ({ visible, onClose }) => {
           <Input placeholder="Phone" />
         </Form.Item>
       </Form>
+<<<<<<< HEAD
       
+=======
+
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
       {/* Custom footer buttons */}
       <div className="flex justify-end mt-2">
         <Button onClick={onClose} size="small" className="mr-2">Cancel</Button>

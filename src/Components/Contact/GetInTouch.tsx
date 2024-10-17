@@ -42,11 +42,19 @@ const GetInTouch: React.FC = () => {
   }, []);
 
   return (
+<<<<<<< HEAD
     <div className="relative py-12 px-4 lg:px-24 bg-gradient-to-br from-[#fbfff6] to-[#d9ffe9] min-h-screen flex items-center justify-center">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white rounded-lg shadow-lg overflow-hidden">
         {/* Left Column - Map and Contact Information */}
         <motion.div
           className="p-8 bg-gradient-to-br from-[#e4f7e8] to-[#f0fff4]"
+=======
+    <div className="relative bg-gray-50 py-12 px-4 lg:px-24">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white rounded-lg shadow-lg overflow-hidden">
+        {/* Left Column - Map and Contact Information */}
+        <motion.div
+          className="p-8 bg-gray-100"
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -93,10 +101,17 @@ const GetInTouch: React.FC = () => {
             </div>
           </div>
         </motion.div>
+<<<<<<< HEAD
   
         {/* Right Column - Form */}
         <motion.div
           className="p-8 my-auto bg-white"
+=======
+
+        {/* Right Column - Form */}
+        <motion.div
+          className="p-8 bg-white"
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
           initial={{ x: 300, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -118,10 +133,17 @@ const GetInTouch: React.FC = () => {
               <Input
                 placeholder="Enter your name"
                 size="large"
+<<<<<<< HEAD
                 className="rounded-full border-2 border-gradient-to-br from-[#a1cd64] to-[#408a60] transition duration-300 focus:ring-0"
               />
             </Form.Item>
   
+=======
+                className="rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500"
+              />
+            </Form.Item>
+
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
             {/* Email Address Field */}
             <Form.Item
               name="email"
@@ -131,10 +153,17 @@ const GetInTouch: React.FC = () => {
               <Input
                 placeholder="Enter your email address"
                 size="large"
+<<<<<<< HEAD
                 className="rounded-full border-2  border-gradient-to-br from-[#a1cd64] to-[#408a60] transition duration-300 focus:ring-0"
               />
             </Form.Item>
   
+=======
+                className="rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500"
+              />
+            </Form.Item>
+
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
             {/* Phone No Field */}
             <Form.Item
               name="phone"
@@ -150,10 +179,17 @@ const GetInTouch: React.FC = () => {
               <Input
                 placeholder="Enter your phone number"
                 size="large"
+<<<<<<< HEAD
                 className="rounded-full border-2  border-gradient-to-br from-[#a1cd64] to-[#408a60] transition duration-300  "
               />
             </Form.Item>
   
+=======
+                className="rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500"
+              />
+            </Form.Item>
+
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
             {/* Message Field */}
             <Form.Item
               name="message"
@@ -162,17 +198,28 @@ const GetInTouch: React.FC = () => {
               <Input.TextArea
                 rows={4}
                 placeholder="Type your message..."
+<<<<<<< HEAD
                 className="rounded-md border-2  border-gradient-to-br from-[#a1cd64] to-[#408a60] transition duration-300  "
               />
             </Form.Item>
   
+=======
+                className="rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500"
+              />
+            </Form.Item>
+
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
             {/* Submit Button */}
             <Form.Item>
               <Button
                 type="primary"
                 htmlType="submit"
                 size="large"
+<<<<<<< HEAD
                 className="w-full py-5 mt-6  button-indigo-600  hover:opacity-90 rounded-full transition duration-300"
+=======
+                className="w-full bg-indigo-600 hover:bg-indigo-500 rounded-md transition duration-300"
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
                 loading={loading} // Show loading spinner when submitting
               >
                 Submit
@@ -183,7 +230,10 @@ const GetInTouch: React.FC = () => {
       </div>
     </div>
   );
+<<<<<<< HEAD
   
+=======
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
 };
 
 export default GetInTouch;

@@ -1,16 +1,22 @@
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
 import React from 'react';
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Layout, Typography, Row, Col, Space } from 'antd';
 import { FaXTwitter } from 'react-icons/fa6';
+<<<<<<< HEAD
 import Logo from '../../assets/Logo/logo.svg';
+=======
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
 
 const { Title, Text } = Typography;
 
@@ -24,7 +30,11 @@ const footerVariants = {
 };
 
 const linkVariants = {
+<<<<<<< HEAD
   hover: { scale: 1.05, color: '#fcbc04' }, // Subtle hover scale effect
+=======
+  hover: { scale: 1.1, color: '#fcbc04' },
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
 };
 
 const socialMediaVariants = {
@@ -34,13 +44,18 @@ const socialMediaVariants = {
 
 const Footer: React.FC = () => {
   return (
+<<<<<<< HEAD
     <Layout.Footer className="bg-gray-100 text-black py-13 relative footer border-t border-gray-300"> {/* Slightly larger padding for overall spacing */}
+=======
+    <Layout.Footer className="bg-emerald-600 text-white py-12 relative footer">
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
       <motion.div
         className="container mx-auto px-4"
         initial="hidden"
         animate="visible"
         variants={footerVariants}
       >
+<<<<<<< HEAD
         {/* Logo Section */}
         <div className="flex justify-center mb-6"> {/* Added some more space below the logo */}
           <Link to="/" className="flex items-center">
@@ -81,14 +96,58 @@ const Footer: React.FC = () => {
                   </Link>
                 </motion.div>
               ))}
+=======
+        <Row gutter={[16, 16]} justify="center">
+          {/* About Us Section */}
+          <Col xs={24} md={8} className="text-center md:text-left">
+            <Title level={3} style={{ color: '#fcbc04' }} className="mb-4">About Us</Title>
+            <Text className="text-white text-lg">
+              We are a leading provider of innovative solutions, dedicated to delivering excellence and fostering growth. Our team of experts is committed to achieving success and creating value for our clients.
+            </Text>
+          </Col>
+
+          {/* Links */}
+          <Col xs={24} md={8} className="text-center md:text-left">
+            <Title level={3} style={{ color: '#fcbc04' }} className="mb-4">Quick Links</Title>
+            <Space direction="vertical" size="large">
+              <motion.div
+                variants={linkVariants}
+                whileHover="hover"
+              >
+                <Link to="/" className="footer-item text-white text-lg font-semibold transition duration-300">Home</Link>
+              </motion.div>
+              <motion.div
+                variants={linkVariants}
+                whileHover="hover"
+              >
+                <Link to="/about" className="footer-item text-white text-lg font-semibold transition duration-300">About</Link>
+              </motion.div>
+              <motion.div
+                variants={linkVariants}
+                whileHover="hover"
+              >
+                <Link to="/services" className="footer-item text-white text-lg font-semibold transition duration-300">Services</Link>
+              </motion.div>
+              <motion.div
+                variants={linkVariants}
+                whileHover="hover"
+              >
+                <Link to="/contact" className="footer-item text-white text-lg font-semibold transition duration-300">Contact</Link>
+              </motion.div>
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
             </Space>
           </Col>
 
           {/* Social Media Icons */}
+<<<<<<< HEAD
           <Col xs={24} md={8} className="text-center -mt-1"> {/* Added negative margin top */}
             <Title level={3} style={{ color: '#0000FF' }} className="mb-5"> {/* Reduced margin-bottom */}
               Follow Us
             </Title>
+=======
+          <Col xs={24} md={8} className="text-center">
+            <Title level={3} style={{ color: '#fcbc04' }} className="mb-4">Follow Us</Title>
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
             <motion.div
               className="flex justify-center space-x-4"
               initial="hidden"
@@ -96,6 +155,7 @@ const Footer: React.FC = () => {
               variants={socialMediaVariants}
               transition={{ duration: 1, ease: 'easeInOut' }}
             >
+<<<<<<< HEAD
               {[
                 { icon: <FaFacebookF />, href: 'https://www.facebook.com/Metlaservices01', hoverColor: 'hover:text-blue-600' },
                 { icon: <FaXTwitter />, href: 'https://x.com/e31927?t=pujNMykgk2grg-CEgArk4g&s=08', hoverColor: 'hover:text-black' },
@@ -123,6 +183,48 @@ const Footer: React.FC = () => {
 
         {/* Footer Bottom */}
         <div className="text-center mt-2 text-gray-600 text-sm">
+=======
+              <motion.a
+                href="https://www.facebook.com/Metlaservices01"
+                className="social-media-icon text-white hover:text-blue-600 transition duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.2 }}
+              >
+                <FaFacebookF className="text-3xl" />
+              </motion.a>
+              <motion.a
+                href="https://x.com/e31927?t=pujNMykgk2grg-CEgArk4g&s=08 "
+                className="social-media-icon text-white hover:text-black transition duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.2 }}
+              >
+                <FaXTwitter className="text-3xl" />
+              </motion.a>
+              <motion.a
+                href="https://www.linkedin.com/in/metla-services-2396782bb/"
+                className="social-media-icon text-white hover:text-blue-700 transition duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.2 }}
+              >
+                <FaLinkedinIn className="text-3xl" />
+              </motion.a>
+              <motion.a
+                href="https://www.instagram.com/metlaservices001/"
+                className="social-media-icon text-white hover:text-pink-500 transition duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.2 }}>
+                <FaInstagram className="text-3xl" />
+              </motion.a>
+            </motion.div>
+          </Col>
+        </Row>
+
+        <div className="text-center mt-8 text-gray-300">
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
           &copy; {new Date().getFullYear()} Metla Services. All rights reserved.
         </div>
       </motion.div>
@@ -131,6 +233,7 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+<<<<<<< HEAD
 
 
 
@@ -250,3 +353,5 @@ export default Footer;
 // };
 
 // export default Footer;
+=======
+>>>>>>> e3c761706892c44b54d9d20b26859b5ff0b509cc
