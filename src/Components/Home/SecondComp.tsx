@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 
 // Import images
-import serviceImg1 from '../../assets/Services/service-01.webp';
-import serviceImg2 from '../../assets/Services/service-02.webp';
-import serviceImg3 from '../../assets/Services/service-03.webp';
-import serviceImg4 from '../../assets/Services/service-04.webp';
-import serviceImg7 from '../../assets/Services/service-05.webp';
-import serviceImg8 from '../../assets/Services/service-08.webp';
-import serviceImg9 from '../../assets/Services/service9.webp';
+// import serviceImg1 from '../../assets/Services/service-01.webp';
+// import serviceImg2 from '../../assets/Services/service-02.webp';
+// import serviceImg3 from '../../assets/Services/service-03.webp';
+// import serviceImg4 from '../../assets/Services/service-04.webp';
+// import serviceImg7 from '../../assets/Services/service-05.webp';
+// import serviceImg8 from '../../assets/Services/service-08.webp';
+// import serviceImg9 from '../../assets/Services/service9.webp';
 
 // Define types for card data
 interface CardData {
