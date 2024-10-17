@@ -18,7 +18,12 @@ function App() {
   }, [location]);
 
   const handlePopupClose = () => {
-    setIsPopupVisible(false); // Close the popup
+    if (!isFormFilled) { // Only allow closing if the form is filled
+      setIsPopupVisible(false); // Close the popup
+    } else {
+      // Optionally, you can display a message or handle other logic here
+      console.log("Form needs to be filled out before closing.");
+    }
   };
 
   return (
