@@ -83,7 +83,7 @@ const BFSI = () => {
                 <div className="text-5xl mb-4 animate-bounce">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-[#147971] mb-2">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
-                <Link to='/service-details' className="text-[#147971] hover:underline transition-all duration-300">
+                <Link to='/contact' className="text-[#147971] hover:underline transition-all duration-300">
                   Learn More
                 </Link>
               </li>

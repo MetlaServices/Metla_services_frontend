@@ -322,22 +322,26 @@ const Nav: React.FC = () => {
               Blog
             </Link>
 
-            {/* Info Bar (Email and Phone in the Navbar) */}
             <div className="hidden md:flex items-center gap-6">
-              <div className="group relative cursor-pointer flex items-center space-x-2">
-                <FaEnvelope className="text-base md:text-lg text-black" />
-                <div className="text-black hidden group-hover:block absolute top-8 right-0 bg-[#fffcc2] rounded-full shadow-md py-2 px-4 text-xs md:text-sm">
-                  info@metlaservices.com
-                </div>
-              </div>
+  
+  {/* Email Section */}
+  <div className="group relative cursor-pointer flex items-center space-x-2">
+    <FaEnvelope className="text-base md:text-lg text-black" />
+    <div className="absolute hidden group-hover:block top-full mt-2 right-0 bg-[#c7e6b2] rounded-full shadow-md py-2 px-4 text-xs md:text-sm whitespace-nowrap z-10">
+      info@metlaservices.com
+    </div>
+  </div>
 
-              <div className="group relative cursor-pointer flex items-center space-x-2">
-                <FaPhone className="text-base md:text-lg text-black" />
-                <div className="text-black hidden group-hover:block absolute top-8 right-0 bg-[#fffcc2] rounded-full shadow-md py-2 px-4 text-xs md:text-sm">
-                  +919289586627
-                </div>
-              </div>
-            </div>
+  {/* Phone Section */}
+  <div className="group relative cursor-pointer flex items-center space-x-2">
+    <FaPhone className="text-base md:text-lg text-black" />
+    <div className="absolute hidden group-hover:block top-full mt-2 right-0 bg-[#c7e6b2] rounded-full shadow-md py-2 px-4 text-xs md:text-sm whitespace-nowrap z-10">
+      +919289586627
+    </div>
+  </div>
+
+</div>
+
           </div>
 
           {/* Mobile Menu Button */}
