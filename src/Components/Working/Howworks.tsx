@@ -2,10 +2,10 @@
 import React from 'react';
 
 import Logo from '../../assets/Logo/logo.svg';
-import jobicon from '../../assets/how it works/job icon.jpg';
-import registericon from '../../assets/how it works/register icon.jpg';
-import searchdreamjob from '../../assets/how it works/searchdrean job icon.jpg';
-import updateprofileicon from '../../assets/how it works/updateprofile icon.jpg';
+import jobicon from '../../assets/how it works/job.webp';
+import registericon from '../../assets/how it works/register.webp';
+import searchdreamjob from '../../assets/how it works/searchdrean.webp';
+import updateprofileicon from '../../assets/how it works/updateprofile.webp';
 
 // Array for main steps
 

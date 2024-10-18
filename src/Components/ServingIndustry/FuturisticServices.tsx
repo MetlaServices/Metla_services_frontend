@@ -10,9 +10,9 @@ import { Link } from 'react-router-dom';
 // import image2 from '../../assets/Virtual-hiring-tools.webp';
 // import image3 from '../../assets/AI-Skills-Assessment.webp';
 
-import image1 from '../../assets/futuristicfolder/futuristic1.png'
-import image2 from '../../assets/futuristicfolder/futuristic2.png'
-import image3 from '../../assets/futuristicfolder/futuristic3.png'
+import image1 from '../../assets/futuristicfolder/futuristic1.webp'
+import image2 from '../../assets/futuristicfolder/futuristic2.webp'
+import image3 from '../../assets/futuristicfolder/futuristic3.webp'
 
 
 

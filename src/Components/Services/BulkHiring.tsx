@@ -1,12 +1,10 @@
 
-
 const BulkHiring = () => {
   return (
     <div>
-        bulkhiring
-      
+    bulk hiring  
     </div>
   )
 }
 
-export default BulkHiring
+export default BulkHiring;

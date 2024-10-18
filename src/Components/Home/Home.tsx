@@ -9,7 +9,7 @@ import HowItWorks from '../Working/Howworks';
 import IndustryCards from '../ServingIndustry/ServiceIndustry';
 import FuturisticServices from '../ServingIndustry/FuturisticServices';
 import FAQ from '../FAQs/Faq';
-import BlogSection from '../BlogSection/OurBlog';
+// import BlogSection from '../BlogSection/OurBlog';
 import Testimonials from '../Testimonials/Testimonials';
 import Achievements from '../Achievements/Achievements';
 import GetInTouch from '../Contact/GetInTouch';
@@ -55,7 +55,7 @@ const HomePage: React.FC = () => {
   <IndustryCards/>
   <FuturisticServices/>
   <FAQ/>
-  <BlogSection/>
+  {/* <BlogSection/> */}
   <Testimonials/>
   <Achievements/>
   <GetInTouch/>

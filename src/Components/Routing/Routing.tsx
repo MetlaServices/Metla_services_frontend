@@ -54,11 +54,13 @@ import MediaEntertainment from "../ServingIndustry/IndustrySectionsFolder/MediaE
 import TalentAquisition from "../BlogSection/BlogFolder/TalentAquisition";
 import ManpowerPlanning from "../BlogSection/BlogFolder/ManpowerPlanning";
 import EmployeeEngagement from "../BlogSection/BlogFolder/EmployeeEngagement";
-import BulkHiring from "../Services/BulkHiring";
 import PayrollOutsource from "../Services/PayrollOutsource";
 import TemporaryManpower from "../Services/TemporaryManpower";
 import IndustryWise from "../Services/IndustryWise";
 import Navblog from "../Navblog/Navblog";
+import BulkHiring from "../Services/BulkHiring";
+import Blog1 from "../Navblog/BlogFolders/Blog1";
+import Blog2 from "../Navblog/BlogFolders/Blog2";
 
 const Routing: React.FC = () => {
   const { admin, isAuth } = useAppSelector((state) => state.admin);
@@ -75,8 +77,6 @@ const Routing: React.FC = () => {
 
       <Route path="/navblog" element={<Navblog/>} />
 
-
-      
         <Route path="/hospital" element={<Hospital />} />
         <Route  path="/hotel-hospitality"  element={<HotelAndHospitality />}  />
         <Route  path="/education-training"  element={<EducationTraining />}   />
@@ -100,6 +100,10 @@ const Routing: React.FC = () => {
         <Route path="/employeeEngagement" element={<EmployeeEngagement/>} />
 
 
+        <Route path="/blog1" element={<Blog1/>} />
+        <Route path="/blog2" element={<Blog2/>} />
+
+
 
       <Route path="/futuristicServiceInnovations" element={<FuturisticServicesInnovations/>} />
       <Route path="/gigeconomy" element={<GigEconomy/>} />
@@ -115,11 +119,10 @@ const Routing: React.FC = () => {
         <Route path="outplacement" element={<GlobalPlacements />} />
         <Route path="talent-management" element={<TalentAcquisition />} />
         <Route path="hr-consultancy" element={<HRConsulting />} />
-        <Route path="bulk-hiring" element={<BulkHiring/>} />
-        <Route path="payroll-outsource" element={<PayrollOutsource/>} />
-        <Route path="temporary-manpower" element={<TemporaryManpower/>} />
-        <Route path="industry-wise" element={<IndustryWise/>} />
-    
+        <Route path="contact" element={<BulkHiring/>} />
+        <Route path="contact" element={<PayrollOutsource/>} />
+        <Route path="contact" element={<TemporaryManpower/>} />
+        <Route path="contact" element={<IndustryWise/>} />
         <Route
           path="permanent-staffing"
           element={<PermanentStaffingSolution />}
