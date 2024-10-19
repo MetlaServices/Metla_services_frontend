@@ -60,7 +60,7 @@ const Nav: React.FC = () => {
   );
 
   return (
-    <nav className="relative bg-white">
+    <nav className="sticky top-0 relative bg-white z-[1000]">
       {/* Navbar Container */}
       <div className="container mx-auto px-4">
         {/* Navbar Row */}
