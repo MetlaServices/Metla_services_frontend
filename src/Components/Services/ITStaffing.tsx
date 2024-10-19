@@ -182,7 +182,6 @@
 
 import React from 'react';
 import { FaCogs, FaCode, FaLaptopCode, FaNetworkWired } from 'react-icons/fa';
-import ITStaffingImage from '../../assets/Services/IT_Staffing.webp';
 import { Link } from 'react-router-dom';
 
 const ITStaffingSolutions: React.FC = () => {

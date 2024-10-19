@@ -4,7 +4,6 @@ import { Card, Col, Row } from 'antd';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import ExecutiveSearchImage from '../../assets/executive_search.jpg';
 
 const { Meta } = Card;
 

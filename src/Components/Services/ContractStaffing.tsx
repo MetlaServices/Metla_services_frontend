@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { FaUserTie, FaCogs, FaClock, FaHandshake } from "react-icons/fa";
-import ContractStaffingImage from '../../assets/contract-staffing.webp'; // Correct import
 import { Link } from "react-router-dom";
 
 
