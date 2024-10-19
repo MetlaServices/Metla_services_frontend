@@ -39,7 +39,7 @@ const CustomCursor: React.FC = () => {
     };
   }, []);
 
-  return null; // This component does not render anything itself
+  return null; 
 };
 
 export default CustomCursor;

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaPhone } from 'react-icons/fa';
 import { FaComments } from 'react-icons/fa'
+import { Link } from "react-router-dom";
 
 // Define a message type for the chatbot
 interface Message {
@@ -46,12 +47,12 @@ const Chat: React.FC = () => {
   return (
     <div className="fixed bottom-4 right-4 z-50 flex flex-col items-center space-y-2">
 
-      <a href="tel:+919289586627">
+      <Link to="tel:+919289586627">
         <button className="bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg hover:bg-blue-600 transition-all">
           <FaPhone className="w-6 h-10" />
         </button>
-      </a>
-      <a href="https://wa.me/919289586627" target="_blank" rel="noopener noreferrer">
+      </Link>
+      <Link to="https://wa.me/919289586627" target="_blank" rel="noopener noreferrer">
         <button className="bg-green-500 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg hover:bg-green-600 transition-all">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
@@ -59,7 +60,7 @@ const Chat: React.FC = () => {
             className="w-10 h-10"
           />
         </button>
-      </a>
+      </Link>
 
       <button
   onClick={toggleChat}

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const TalentAcquisition = () => {
     return (
       <div className="container mx-auto px-6 py-12 bg-gray-50">
@@ -112,12 +114,12 @@ const TalentAcquisition = () => {
             Mastering the art of talent acquisition is essential for organizations aiming to thrive in today’s competitive market. At Metla Services, we are dedicated to building our dream team and securing our place as an industry leader through innovative and strategic talent acquisition practices.
           </p>
           <p className="mt-4 text-gray-600">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-block bg-[#147971] text-white font-semibold py-2 px-4 rounded hover:bg-[#0d5f4d] transition duration-300"
             >
               Contact Us
-            </a> 
+            </Link> 
             to learn more about our talent acquisition strategies and how we can help you build your dream team.
           </p>
         </footer>

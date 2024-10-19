@@ -89,7 +89,7 @@ const ContractStaffing: React.FC = () => {
         {/* Image Section with Overlay Text */}
         <div className="relative text-center mb-12 image-section">
           <img
-            src={ContractStaffingImage} // Use the imported variable
+            src='https://media.istockphoto.com/id/1084198094/photo/lawyer-attorney-signing-a-contract.webp?a=1&b=1&s=612x612&w=0&k=20&c=CYwWF9T4Idh33AGJUB629rhXOmsBWCAZydjVi_DAsPU=' // Use the imported variable
             alt="Contract Staffing"
             className="w-full h-[50vh] object-cover rounded-lg shadow-lg"
           />
@@ -113,7 +113,7 @@ const ContractStaffing: React.FC = () => {
             <p className="text-gray-700 mb-4">
               Our team has extensive experience in identifying and vetting top talent to meet your needs.
             </p>
-            <Link to="/about-us">
+            <Link to="/about">
               <a className="text-cyan-500 hover:underline">
                 Learn More
               </a>
@@ -126,7 +126,7 @@ const ContractStaffing: React.FC = () => {
             <p className="text-gray-700 mb-4">
               We offer flexible staffing solutions tailored to your specific requirements, ensuring a perfect fit.
             </p>
-            <Link to="/services">
+            <Link to="/">
               <a className="text-cyan-500 hover:underline">
                 Explore Solutions
               </a>
@@ -139,7 +139,7 @@ const ContractStaffing: React.FC = () => {
             <p className="text-gray-700 mb-4">
               Our streamlined process ensures you get the right candidates quickly and efficiently, saving you time.
             </p>
-            <Link to="/process">
+            <Link to="/">
               <a className="text-cyan-500 hover:underline">
                 See Our Process
               </a>
@@ -152,7 +152,7 @@ const ContractStaffing: React.FC = () => {
             <p className="text-gray-700 mb-4">
               We build lasting relationships with our clients and candidates to ensure successful and productive placements.
             </p>
-            <Link to="/partnerships">
+            <Link to="/contact">
               <a className="text-cyan-500 hover:underline">
                 Discover More
               </a>

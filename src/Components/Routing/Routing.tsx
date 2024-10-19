@@ -110,8 +110,8 @@ const Routing: React.FC = () => {
       <Route path="/skillassesment" element={<SkillAssesment/>} />
         
 
-
-      <Route path="/services">
+{/* 
+      <Route path="/services"> */}
         <Route path="contract-staffing" element={<ContractStaffing />} />
         <Route path="it-staffing" element={<ITStaffingSolutions />} />
         <Route path="executive-search" element={<ExecutiveSearch />} />
@@ -119,15 +119,15 @@ const Routing: React.FC = () => {
         <Route path="outplacement" element={<GlobalPlacements />} />
         <Route path="talent-management" element={<TalentAcquisition />} />
         <Route path="hr-consultancy" element={<HRConsulting />} />
-        <Route path="contact" element={<BulkHiring/>} />
-        <Route path="contact" element={<PayrollOutsource/>} />
-        <Route path="contact" element={<TemporaryManpower/>} />
-        <Route path="contact" element={<IndustryWise/>} />
+        <Route path="bulk-hiring" element={<BulkHiring/>} />
+        <Route path="payroll-outsource" element={<PayrollOutsource/>} />
+        <Route path="temporary-manpower" element={<TemporaryManpower/>} />
+        <Route path="industry-wise-staffing" element={<IndustryWise/>} />
         <Route
           path="permanent-staffing"
           element={<PermanentStaffingSolution />}
         />
-      </Route>
+      {/* </Route> */}
       <Route path="/contact" element={<ContactUs />} />
       <Route path="/about" element={<AboutUsPage />} />
       <Route path="*" element={<NotFoundPage />} />

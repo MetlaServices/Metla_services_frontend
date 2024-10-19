@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const EmployeeEngagement = () => {
     return (
       <div className="container mx-auto px-6 py-12 bg-gray-50">
@@ -93,12 +95,12 @@ const EmployeeEngagement = () => {
             At Metla Services, we understand that employee engagement is not just a buzzword; it's a vital aspect of our organizational culture. By prioritizing engagement, we foster a productive and thriving workplace where employees feel valued and motivated.
           </p>
           <p className="mt-4 text-gray-600">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-block bg-[#147971] text-white font-semibold py-2 px-4 rounded hover:bg-[#0d5f4d] transition duration-300"
             >
               Contact Us
-            </a> 
+            </Link> 
             to learn more about our employee engagement initiatives and how we can help your organization achieve its goals.
           </p>
         </footer>

@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import navblogbanner from '../../assets/navblogfolder/navblogbanner.webp'
 
 const Navblog = () => {
@@ -40,19 +41,17 @@ const Navblog = () => {
               {/* Fast & Efficient Hiring */}
 
             Metla Services: Fast & Efficient Hiring
-
-
             </h3>
             <p className="text-gray-600 mb-4">
               {/* Quick, professional hiring solutions for growing businesses. */}
               Metla Services ensures fast, efficient hiring with quality candidates, helping businesses save time and costs
             </p>
-            <a
-              href="/blog1"
+            <Link
+              to="/blog1"
               className="text-blue-700 font-medium hover:text-gray-900 transition"
             >
-              Learn More
-            </a>
+             Read More
+            </Link>
           </div>
         </div>
 
@@ -71,12 +70,12 @@ const Navblog = () => {
             <p className="text-gray-600 mb-4">
            Discover how Metla Services helps businesses across industries find the right talent quickly and efficiently through their expertise and vast talent pool.
             </p>
-            <a
-              href="/blog2"
+            <Link
+              to="/blog2"
               className="text-blue-700 font-medium hover:text-gray-900 transition"
             >
-              Learn More
-            </a>
+              Read More
+            </Link>
           </div>
         </div>
 
@@ -98,7 +97,7 @@ const Navblog = () => {
               href="/contact"
               className="text-blue-700 font-medium hover:text-gray-900 transition"
             >
-              Learn More
+              Read More
             </a>
           </div>
         </div> */}
@@ -143,12 +142,12 @@ const Navblog = () => {
 
       {/* Call to Action Section */}
       <div className="my-16 text-center">
-        <a
-          href="/contact"
+        <Link
+          to="/contact"
           className="inline-block px-10 py-4 bg-blue-700 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-gray-800 transition"
         >
           Get Started with Metla Services
-        </a>
+        </Link>
       </div>
     </div>
   );

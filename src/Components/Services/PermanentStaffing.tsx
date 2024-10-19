@@ -2,6 +2,7 @@ import React from 'react';
 import { FaUserTie, FaHandshake, FaHandHoldingUsd } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import PermanentStaffing from '../../assets/Services/permanent_staffing.webp';
+import { Link } from 'react-router-dom';
 
 const fadeInVariant = {
   hidden: { opacity: 0, y: 50 },
@@ -35,7 +36,7 @@ const PermanentStaffingSolution: React.FC = () => {
           >
             Our permanent staffing solutions help you build a team that drives success.
           </motion.p>
-      <a href='/contact'   className="bg-cyan-500 text-white py-3 px-6 rounded-lg font-semibold ">get stared</a>  
+      <Link to='/contact'   className="bg-cyan-500 text-white py-3 px-6 rounded-lg font-semibold ">get stared</Link>  
         </div>
       </section>
 

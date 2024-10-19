@@ -62,25 +62,25 @@ const cardData: CardData[] = [
     imgSrc: 'https://media.istockphoto.com/id/167440113/photo/large-group-of-people-smiling-in-camera.jpg?s=612x612&w=0&k=20&c=yJLVtoW7hUaoJUXWSBROIBtpWo-cDBS_X-05VyVJ9Ko=',
     title: 'Bulk Hiring',
     description: 'Enhance your workforce with our HR solutions that improve team management and employee satisfaction.',
-    link: 'bullk-hiring',
+    link: 'contact',
   },
   {
     imgSrc: 'https://media.istockphoto.com/id/1330234595/photo/closeup-shot-of-an-unrecognisable-businesswoman-calculating-finances-in-an-office.jpg?s=612x612&w=0&k=20&c=dwgvBXpHuM-Jz5XCQtCtLot59CJzGm5iAlxgKm9Yr8Q=',
     title: 'Payroll Outsource',
     description: 'Enhance your workforce with our HR solutions that improve team management and employee satisfaction.',
-    link: 'payroll-outsource',
+    link: 'contact',
   },
   {
     imgSrc: 'https://media.istockphoto.com/id/2164866449/photo/people-working-in-the-office-using-computer.jpg?s=612x612&w=0&k=20&c=gs6NBfW0CBNWR_a6VwPUYHhl-ATi65Grsc-q_MvOxjo=',
     title: 'Temporary Manpower',
     description: 'Enhance your workforce with our HR solutions that improve team management and employee satisfaction.',
-    link: 'temporary-manpower',
+    link: 'contact',
   },
   {
     imgSrc: 'https://media.istockphoto.com/id/1554865828/photo/hrm-insight-magnifier-glass-zooms-in-on-manager-icon-in-staff-icons.jpg?s=612x612&w=0&k=20&c=zYSJEJJkSirQzucG2-1gZLnqptoZstB95wNsm9rmmVQ=',
     title: 'Industry Wise Staffing',
     description: 'Enhance your workforce with our HR solutions that improve team management and employee satisfaction.',
-    link: 'industry-wise',
+    link: 'contact',
   },
   {
     imgSrc:'https://media.istockphoto.com/id/1286469039/photo/global-communication-network-concept-worldwide-business-intelligence-agencies.jpg?s=612x612&w=0&k=20&c=Y2bT6iiTlYFp93FpkRyZWo6tFliT7A3ML9b-xCvD764=',
@@ -126,7 +126,7 @@ export const SecondComponent: React.FC = () => {
                 ref={(el) => (cardsRef.current[index] = el!)} // Attach ref for GSAP animations
                 className="relative rounded-lg overflow-hidden shadow-lg bg-white w-full sm:w-1/2 md:w-1/3 lg:w-1/4 group"
               >
-                <Link to={`/services/${card.link}`} className="block h-full">
+                <Link to={`/${card.link}`} className="block h-full">
                   {/* Card Image */}
                   <div className="relative overflow-hidden">
                     <img

@@ -8,8 +8,7 @@ const { TextArea } = Input;
 
 const ContactForm: React.FC = () => {
   const dispatch = useAppDispatch();
-  const [loading, setLoading] = useState(false); // Loading state
-
+  const [loading, setLoading] = useState(false); 
   const onFinish = async (values: any) => {
     setLoading(true); // Start loading
     await dispatch(asyncSendClientQuery(values));

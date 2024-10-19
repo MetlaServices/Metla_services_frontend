@@ -6,16 +6,16 @@ import { DownOutlined, MenuOutlined, CloseOutlined } from '@ant-design/icons';
 import Logo from '../../assets/Logo/logo.svg';
 
 const services = [
-  { name: 'Contract Staffing', path: '/services/contract-staffing' },
-  { name: 'Permanent Staffing', path: '/services/permanent-staffing' },
+  { name: 'Contract Staffing', path: '/contract-staffing' },
+  { name: 'Permanent Staffing', path: '/permanent-staffing' },
   { name: 'Payroll Outsource', path: '/contact' },
   { name: 'Temporary Manpower', path: '/contact' },
   { name: 'Bulk Hiring', path: '/contact' },
   { name: 'Industries Wise staffing', path: '/contact' },
-  { name: 'IT Staffing', path: '/services/it-staffing' },
-  { name: 'Executive Search', path: '/services/executive-search' },
-  { name: 'Software Solutions', path: '/services/software-solutions' },
-  { name: 'Talent Management', path: '/services/talent-management' },
+  { name: 'IT Staffing', path: '/it-staffing' },
+  { name: 'Executive Search', path: '/executive-search' },
+  { name: 'Software Solutions', path: '/software-solutions' },
+  { name: 'Talent Management', path: '/talent-management' },
 ];
 
 const enquiries = [

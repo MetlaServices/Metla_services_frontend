@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const ManpowerPlanning = () => {
     return (
       <div className="container mx-auto px-6 py-12 bg-gray-50">
@@ -93,12 +95,12 @@ const ManpowerPlanning = () => {
             Mastering the art of manpower planning is essential for organizations aiming to thrive in today’s competitive market. At Metla Services, we are dedicated to overcoming HR challenges and building a sustainable workforce.
           </p>
           <p className="mt-4 text-gray-600">
-            <a
-              href="/contact"
+            <Link
+             to="/contact"
               className="inline-block bg-[#147971] text-white font-semibold py-2 px-4 rounded hover:bg-[#0d5f4d] transition duration-300"
             >
               Contact Us
-            </a> 
+            </Link> 
             to learn more about our manpower planning strategies and how we can assist your organization.
           </p>
         </footer>

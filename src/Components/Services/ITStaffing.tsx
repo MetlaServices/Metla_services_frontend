@@ -183,6 +183,7 @@
 import React from 'react';
 import { FaCogs, FaCode, FaLaptopCode, FaNetworkWired } from 'react-icons/fa';
 import ITStaffingImage from '../../assets/Services/IT_Staffing.webp';
+import { Link } from 'react-router-dom';
 
 const ITStaffingSolutions: React.FC = () => {
   return (
@@ -201,7 +202,7 @@ const ITStaffingSolutions: React.FC = () => {
         {/* Image Section with Overlay Text */}
         <div className="relative text-center mb-16">
           <img
-            src={ITStaffingImage}
+            src='https://media.istockphoto.com/id/1413764767/photo/business-hierarchy-structure-of-workteams-in-corporation-with-ceo-executives-and-employees.jpg?s=612x612&w=0&k=20&c=1zspSpt_u10WMonQTDcHGa2Sc5EBlARC-WUvsvtixIk='
             alt="IT Staffing"
             className="w-full h-[50vh] object-cover rounded-lg shadow-xl"
           />
@@ -247,9 +248,9 @@ const ITStaffingSolutions: React.FC = () => {
               {feature.icon}
               <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-2">{feature.title}</h3>
               <p className="text-gray-700 mb-4">{feature.text}</p>
-              <a href={feature.link} className="text-cyan-500 hover:underline">
+              <Link to={feature.link} className="text-cyan-500 hover:underline">
                 Learn More
-              </a>
+              </Link>
             </div>
           ))}
         </div>
@@ -262,9 +263,9 @@ const ITStaffingSolutions: React.FC = () => {
           <p className="text-base md:text-lg text-gray-600 mb-6">
             Contact us today to explore our IT Staffing Solutions and discover how we can help you achieve your strategic goals.
           </p>
-          <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition duration-300">
+          <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition duration-300">
             Get in Touch
-          </a>
+          </Link>
         </div>
       </div>
     </div>

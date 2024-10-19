@@ -6,9 +6,10 @@ const Blog1 = () => {
     <div className="bg-gray-100 min-h-screen py-10 px-4 md:px-20">
       {/* Header Section */}
       <header className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-blue-600 transition-transform transform hover:scale-105 duration-500">
-         Fast & Efficient Hiring
-        </h1>
+      <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-blue-600 to-purple-500 transition-transform transform duration-500 ease-out drop-shadow-md">
+  Fast & Efficient Hiring
+</h1>
+
         <p className="text-lg md:text-xl text-gray-600 mt-4">Why Metla Services Is the Best Recruitment Agency in India for Fast & Efficient Hiring!</p>
       </header>
 
@@ -96,7 +97,7 @@ const Blog1 = () => {
 
         <h3 className="text-2xl font-semibold text-gray-800 mb-4 mt-10">Contact Us Now</h3>
         <p className="text-lg leading-relaxed text-gray-700 mb-4">
-          Looking for ways to hire quickly and effectively? Reach out to us at <a href="mailto:info@metlaservices.com" className="text-blue-600 hover:underline">info@metlaservices.com</a> or call us at +91 123 456 7890. We’re here to assist you with all your recruitment needs!
+          Looking for ways to hire quickly and effectively? Reach out to us at <a href="mailto:info@metlaservices.com" className="text-blue-600 hover:underline">info@metlaservices.com</a> or call us at +91 9289586627 We’re here to assist you with all your recruitment needs!
         </p>
       </div>
     </div>

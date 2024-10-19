@@ -22,7 +22,7 @@ const Blog2 = () => {
           However, having an open position might not be of any benefit to your firm as it will make your company lose time and even money. By not filling the job each day, your business may lose potential sales or growth opportunities, and other employees are tasked with extra work.
         </p>
 
-        <img  src="https://plus.unsplash.com/premium_photo-1661490114835-ad340765f582?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTd8fCUzQSUyMEZhc3QlMjAlMjYlMjBFZmZpY2llbnQlMjBIaXJpbmd8ZW58MHx8MHx8fDA%3D" alt="Importance of Talent" className="w-full rounded-lg mb-6 object-cover shadow-md transition-transform transform hover:scale-105 duration-500" />
+        <img  src="https://blog.thecenterforsalesstrategy.com/hs-fs/hubfs/The%20Simple%20Truth%20About%20Recruitment%20And%20Selection%20.png?width=1600&name=The%20Simple%20Truth%20About%20Recruitment%20And%20Selection%20.png" alt="Importance of Talent" className="w-full rounded-lg mb-6 object-cover shadow-md transition-transform transform hover:scale-105 duration-500" />
 
         <h3 className="text-2xl font-semibold text-gray-800 mb-4">Benefits of Hiring the Right Talent:</h3>
         <ul className="list-disc list-inside text-lg text-gray-700 space-y-2 mb-6">
@@ -31,7 +31,7 @@ const Blog2 = () => {
           <li>Reduced Hiring Costs: Ensures that fewer expenses are spent on vacancies, hence hiring processes are completed in a short time.</li>
         </ul>
 
-        <img src="https://pmcaonline.org/wp-content/uploads/2021/07/why-you-need-a-recruiting-agency-to-find-the-best-jobs-1280x720-1-696x392.jpg" alt="Team Success" className="w-full rounded-lg mb-6 object-cover shadow-md transition-transform transform hover:scale-105 duration-500" />
+        <img src="https://www.renaisolutions.com/wp-content/uploads/2021/02/recruiting-agency-1536x1024.jpg" alt="Team Success" className="w-full rounded-lg mb-6 object-cover shadow-md transition-transform transform hover:scale-105 duration-500" />
 
         <h3 className="text-2xl font-semibold text-gray-800 mb-4">How Metla Services Helps You Find the Perfect Match</h3>
         <p className="text-lg leading-relaxed text-gray-700 mb-4">
@@ -83,7 +83,7 @@ const Blog2 = () => {
 
         <h3 className="text-2xl font-semibold text-gray-800 mb-4 mt-10">Contact Us Today</h3>
         <p className="text-lg leading-relaxed text-gray-700 mb-4">
-          Today, are you ready to meet your ideal candidate? For more information, please contact us at <a href="mailto:info@metlaservices.com" className="text-blue-600 hover:underline">info@metlaservices.com</a> or call us at +91 123 456 7890. We’re here to assist you with all your recruitment needs!
+          Today, are you ready to meet your ideal candidate? For more information, please contact us at <a href="mailto:info@metlaservices.com" className="text-blue-600 hover:underline">info@metlaservices.com</a> or call us at +91 9289586627 . We’re here to assist you with all your recruitment needs!
         </p>
       </div>
     </div>

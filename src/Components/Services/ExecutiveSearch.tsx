@@ -82,7 +82,9 @@ const ExecutiveSearch: React.FC = () => {
         {/* Image Section with Overlay Text */}
         <div className="relative w-full h-auto max-w-full md:max-w-4xl mx-auto" ref={imageRef}>
           <img
-            src={ExecutiveSearchImage}
+            // src={ExecutiveSearchImage}
+
+            src="https://i0.wp.com/nonprofitlawblog.com/assets/Executive-Search.jpg?fit=1140%2C831&ssl=1"
             alt="Executive Search"
             className="w-full h-auto object-cover rounded-lg shadow-lg"
           />
