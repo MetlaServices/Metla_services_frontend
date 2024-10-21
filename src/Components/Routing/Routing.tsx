@@ -60,8 +60,8 @@ import BulkHiring from "../Services/BulkHiring";
 import FetchParticularBlog from "../Navblog/BlogFolders/FetchParticularBlog";
 
 const Routing: React.FC = () => {
-  const { admin, isAuth } = useAppSelector((state) => state.admin);
-  const isAdmin = isAuth && admin?.userType === "Admin";
+  // const { admin, isAuth } = useAppSelector((state) => state.admin);
+  // const isAdmin = isAuth && admin?.userType === "Admin";
   const { user, isUserAuth } = useAppSelector((state) => state.user);
   const isUser = isUserAuth && user?.userType === "User";
 
