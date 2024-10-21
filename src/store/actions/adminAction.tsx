@@ -5,6 +5,7 @@ import { Action } from "@reduxjs/toolkit";
 import { message } from 'antd';
 import { removeAdmin, saveAdmin, saveApplications, saveQuery, setError, setLoading } from "../reducers/adminSlice";
 import { Navigate, NavigateFunction } from "react-router-dom";
+import { saveBlogs } from "../reducers/userSlice";
 
 // Define the thunk type for async action creators
 type AppThunk<ReturnType = void> = ThunkAction<ReturnType, RootState, unknown, Action<string>>;
@@ -214,3 +215,4 @@ export const asyncAdminLogout = (): AppThunk => async (dispatch) => {
         dispatch(setLoading(false));
     }
 };
+

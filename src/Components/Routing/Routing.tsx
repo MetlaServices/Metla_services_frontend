@@ -18,19 +18,16 @@ import {
   ForgotPassword,
   Register,
 } from "../Authentication/AdminLogin/AdminAuth";
-import Dashboard from "../Admin/Dashboard";
+
 import { useAppSelector } from "../Redux-Hooks/hooks";
 import Unauthorized from "../Others/Unauthorized";
-import AddJob from "../Admin/AdddJobs";
-import JobsList from "../Admin/ViewJobs";
-import EditJob from "../Admin/EditJob";
+
 import { VerifyOtp } from "../Authentication/UserLogin/UserAuth";
 import UserDashboard from "../User/Dashboard";
 import Profile from "../User/Profile";
 import PermanentStaffingSolution from "../Services/PermanentStaffing";
 import RequireOtpVerification from "../User/RequireOtpVerification"; // Adjust the path as needed
-import ViewQueries from "../Admin/Queries";
-import ViewApplications from "../Admin/Applications";
+
 import GetInTouch from "../Contact/GetInTouch";
 import CameraCapture from "../ChatBot/Scanner";
 import Hospital from "../ServingIndustry/IndustrySectionsFolder/Hospital";
@@ -59,8 +56,8 @@ import TemporaryManpower from "../Services/TemporaryManpower";
 import IndustryWise from "../Services/IndustryWise";
 import Navblog from "../Navblog/Navblog";
 import BulkHiring from "../Services/BulkHiring";
-import Blog1 from "../Navblog/BlogFolders/Blog1";
-import Blog2 from "../Navblog/BlogFolders/Blog2";
+
+import FetchParticularBlog from "../Navblog/BlogFolders/FetchParticularBlog";
 
 const Routing: React.FC = () => {
   const { admin, isAuth } = useAppSelector((state) => state.admin);
@@ -86,31 +83,18 @@ const Routing: React.FC = () => {
         <Route path="/ecommerce" element={<Ecommerce />} />
         <Route path="/retail" element={<Retail />} />
         <Route path="/real-estate" element={<RealEstate />} /> 
-
         <Route path="/bfsi" element={<BFSI/>} />
         <Route path="/engineering-manufacturing" element={<EngineeringManufacturing/>} />
         <Route path="/media-entertainment" element={<MediaEntertainment/>} />
         <Route path="/infrastructure" element={<Infrastructure/>} />
         <Route path="/fmcd" element={<FMCD/>} />
         <Route path="/telecom" element={<Telecom/>} />
-
-
         <Route path="/talentAquisition" element={<TalentAquisition/>} />
         <Route path="/manpowerPlanning" element={<ManpowerPlanning/>} />
         <Route path="/employeeEngagement" element={<EmployeeEngagement/>} />
-
-
-        <Route path="/blog1" element={<Blog1/>} />
-        <Route path="/blog2" element={<Blog2/>} />
-
-
-
       <Route path="/futuristicServiceInnovations" element={<FuturisticServicesInnovations/>} />
       <Route path="/gigeconomy" element={<GigEconomy/>} />
       <Route path="/skillassesment" element={<SkillAssesment/>} />
-        
-
-
       <Route path="/services">
         <Route path="contract-staffing" element={<ContractStaffing />} />
         <Route path="it-staffing" element={<ITStaffingSolutions />} />
@@ -135,22 +119,7 @@ const Routing: React.FC = () => {
       <Route path="/admin/login" element={<AdminLogin />} />
       <Route path="/admin/forgot-password" element={<ForgotPassword />} />
       <Route path="/admin/register" element={<Register />} />
-      <Route
-        path="/admin/dashboard"
-        element={isAdmin ? <Dashboard /> : <Unauthorized />}
-      />
-      <Route
-        path="/admin/add-job"
-        element={isAdmin ? <AddJob /> : <Unauthorized />}
-      />
-      <Route
-        path="/admin/view-jobs"
-        element={isAdmin ? <JobsList /> : <Unauthorized />}
-      />
-      <Route
-        path="/jobs/edit/:id"
-        element={isAdmin ? <EditJob /> : <Unauthorized />}
-      />
+
       <Route
         path="/user/verify-otp/:email"
         element={isUser ? <VerifyOtp /> : <Unauthorized />}
@@ -167,15 +136,8 @@ const Routing: React.FC = () => {
         path="/profile/:id"
         element={isUser ? <Profile /> : <Unauthorized />}
       />
-      <Route
-        path="/admin/view-queries"
-        element={isAdmin ? <ViewQueries /> : <Unauthorized />}
-      />
-      <Route
-        path="/admin/applications"
-        element={isAdmin ? <ViewApplications /> : <Unauthorized />}
-      />
       <Route path="/user/login" element={<CameraCapture />} />
+      <Route path="blog/:id" element={<FetchParticularBlog/>}/>
     </Routes>
   );
 };
