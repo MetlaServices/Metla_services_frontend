@@ -174,6 +174,9 @@ const Nav: React.FC = () => {
               Enquiry <DownOutlined />
             </Button>
           </Dropdown>
+          <Link to="/navblog" className="text-lg font-semibold px-3 py-2 rounded-md flex items-center hover:text-yellow-500 hover:underline" onClick={handleLinkClick}>
+            Blog
+          </Link>
         </div>
       </Drawer>
     </nav>
