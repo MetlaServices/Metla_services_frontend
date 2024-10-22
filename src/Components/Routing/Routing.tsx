@@ -1,4 +1,3 @@
-// routing.tsx
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "../Home/Home";
@@ -13,66 +12,47 @@ import ContactUs from "../Contact/ContactForm";
 import AboutUsPage from "../AboutUs/AboutUs";
 import NotFoundPage from "../Others/NotFound";
 import JobListings from "../Jobs/JobBasket";
-import {
-  AdminLogin,
-  ForgotPassword,
-  Register,
-} from "../Authentication/AdminLogin/AdminAuth";
-import Dashboard from "../Admin/Dashboard";
 import { useAppSelector } from "../Redux-Hooks/hooks";
 import Unauthorized from "../Others/Unauthorized";
-import AddJob from "../Admin/AdddJobs";
-import JobsList from "../Admin/ViewJobs";
-import EditJob from "../Admin/EditJob";
 import { VerifyOtp } from "../Authentication/UserLogin/UserAuth";
 import UserDashboard from "../User/Dashboard";
 import Profile from "../User/Profile";
 import PermanentStaffingSolution from "../Services/PermanentStaffing";
-import RequireOtpVerification from "../User/RequireOtpVerification"; // Adjust the path as needed
-import ViewQueries from "../Admin/Queries";
-import ViewApplications from "../Admin/Applications";
+import RequireOtpVerification from "../User/RequireOtpVerification";
 import GetInTouch from "../Contact/GetInTouch";
 import CameraCapture from "../ChatBot/Scanner";
-import Hospital from "../ServingIndustry/IndustrySectionsFolder/Hospital";
-import HotelAndHospitality from "../ServingIndustry/IndustrySectionsFolder/HotelAndHospitality";
-import EducationTraining from "../ServingIndustry/IndustrySectionsFolder/EducationTraining";
-import Finance from "../ServingIndustry/IndustrySectionsFolder/Finance";
-import RenewableEnergy from "../ServingIndustry/IndustrySectionsFolder/RenewableEnergy";
-import Insurance from "../ServingIndustry/IndustrySectionsFolder/Insurance";
-import Ecommerce from "../ServingIndustry/IndustrySectionsFolder/Ecommerce";
-import Retail from "../ServingIndustry/IndustrySectionsFolder/Retail";
-import RealEstate from "../ServingIndustry/IndustrySectionsFolder/RealEstate";
-import GigEconomy from "../ServingIndustry/FuturisticServicesFolder/GigEconomy";
-import SkillAssesment from "../ServingIndustry/FuturisticServicesFolder/SkillAssesment";
-import FuturisticServicesInnovations from "../ServingIndustry/FuturisticServicesFolder/FuturisticServicesInnovations";
-import BFSI from "../ServingIndustry/IndustrySectionsFolder/BFSI";
-import EngineeringManufacturing from "../ServingIndustry/IndustrySectionsFolder/EngineeringManufacturing";
-import Infrastructure from "../ServingIndustry/IndustrySectionsFolder/Infrastructure";
-import FMCD from "../ServingIndustry/IndustrySectionsFolder/FMCD";
-import Telecom from "../ServingIndustry/IndustrySectionsFolder/Telecom";
-import MediaEntertainment from "../ServingIndustry/IndustrySectionsFolder/MediaEntertainment";
-import TalentAquisition from "../BlogSection/BlogFolder/TalentAquisition";
-import ManpowerPlanning from "../BlogSection/BlogFolder/ManpowerPlanning";
-import EmployeeEngagement from "../BlogSection/BlogFolder/EmployeeEngagement";
+import BulkHiring from "../Services/BulkHiring";
 import PayrollOutsource from "../Services/PayrollOutsource";
 import TemporaryManpower from "../Services/TemporaryManpower";
 import IndustryWise from "../Services/IndustryWise";
 import Navblog from "../Navblog/Navblog";
-import BulkHiring from "../Services/BulkHiring";
-import Blog1 from "../Navblog/BlogFolders/Blog1";
-import Blog2 from "../Navblog/BlogFolders/Blog2";
+import FetchParticularBlog from "../Navblog/BlogFolders/FetchParticularBlog";
 
 const Routing: React.FC = () => {
-  const { admin, isAuth } = useAppSelector((state) => state.admin);
-  const isAdmin = isAuth && admin?.userType === "Admin";
   const { user, isUserAuth } = useAppSelector((state) => state.user);
   const isUser = isUserAuth && user?.userType === "User";
+
+  const serviceRoutes = [
+    { path: 'contract-staffing', component: ContractStaffing },
+    { path: 'it-staffing', component: ITStaffingSolutions },
+    { path: 'executive-search', component: ExecutiveSearch },
+    { path: 'software-solutions', component: SoftwareSolutions },
+    { path: 'outplacement', component: GlobalPlacements },
+    { path: 'talent-management', component: TalentAcquisition },
+    { path: 'hr-consultancy', component: HRConsulting },
+    { path: 'contact/bulk-hiring', component: BulkHiring },
+    { path: 'contact/payroll-outsource', component: PayrollOutsource },
+    { path: 'contact/temporary-manpower', component: TemporaryManpower },
+    { path: 'contact/industry-wise', component: IndustryWise },
+    { path: 'permanent-staffing', component: PermanentStaffingSolution },
+  ];
 
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/enquiries/employer" element={<ContactUs />} />
       <Route path="/enquiries/employee" element={<GetInTouch />} />
+<<<<<<< HEAD
 
 
       <Route path="/navblog" element={<Navblog/>} />
@@ -128,29 +108,20 @@ const Routing: React.FC = () => {
           element={<PermanentStaffingSolution />}
         />
       {/* </Route> */}
+=======
+      <Route path="/navblog" element={<Navblog />} />
+      
+      <Route path="/services">
+        {serviceRoutes.map(({ path, component: Component }) => (
+          <Route key={path} path={path} element={<Component />} />
+        ))}
+      </Route>
+
+>>>>>>> 05e0032dd0264debf1ab4536307aeb8ec330a18e
       <Route path="/contact" element={<ContactUs />} />
       <Route path="/about" element={<AboutUsPage />} />
       <Route path="*" element={<NotFoundPage />} />
       <Route path="/jobs" element={<JobListings />} />
-      <Route path="/admin/login" element={<AdminLogin />} />
-      <Route path="/admin/forgot-password" element={<ForgotPassword />} />
-      <Route path="/admin/register" element={<Register />} />
-      <Route
-        path="/admin/dashboard"
-        element={isAdmin ? <Dashboard /> : <Unauthorized />}
-      />
-      <Route
-        path="/admin/add-job"
-        element={isAdmin ? <AddJob /> : <Unauthorized />}
-      />
-      <Route
-        path="/admin/view-jobs"
-        element={isAdmin ? <JobsList /> : <Unauthorized />}
-      />
-      <Route
-        path="/jobs/edit/:id"
-        element={isAdmin ? <EditJob /> : <Unauthorized />}
-      />
       <Route
         path="/user/verify-otp/:email"
         element={isUser ? <VerifyOtp /> : <Unauthorized />}
@@ -163,19 +134,9 @@ const Routing: React.FC = () => {
           </RequireOtpVerification>
         }
       />
-      <Route
-        path="/profile/:id"
-        element={isUser ? <Profile /> : <Unauthorized />}
-      />
-      <Route
-        path="/admin/view-queries"
-        element={isAdmin ? <ViewQueries /> : <Unauthorized />}
-      />
-      <Route
-        path="/admin/applications"
-        element={isAdmin ? <ViewApplications /> : <Unauthorized />}
-      />
+      <Route path="/profile/:id" element={isUser ? <Profile /> : <Unauthorized />} />
       <Route path="/user/login" element={<CameraCapture />} />
+      <Route path="blog/:id" element={<FetchParticularBlog />} />
     </Routes>
   );
 };

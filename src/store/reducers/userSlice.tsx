@@ -8,6 +8,9 @@ interface UserState {
   otpVerified: boolean;
   error: string | null;
   loading: boolean;
+  blog:any;
+   blogs: any[]; // Add blogs here (or define a more specific type for blogs)
+
 }
 
 const savedUser = localStorage.getItem('user');
@@ -19,6 +22,8 @@ const initialState: UserState = {
   otpVerified: false,
   error: null,
   loading: false,
+  blogs:[],
+  blog:null
 };
 
 export const userSlice = createSlice({
@@ -48,6 +53,13 @@ export const userSlice = createSlice({
       state.isUserAuth = false;
       localStorage.clear()
     },
+    saveBlogs:(state:any,action)=>{
+      state.blogs=action.payload
+    }
+    ,
+    saveParticularBlog:(state:any,action)=>{
+      state.blog=action.payload
+    }
   },
 });
 
@@ -56,7 +68,9 @@ export const {
   otpVerificationSuccess, 
   otpVerificationFailure, 
   saveUser, 
-  removeUser 
+  removeUser,
+  saveBlogs ,
+  saveParticularBlog
 } = userSlice.actions;
 
 export default userSlice.reducer;
