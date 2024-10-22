@@ -27,6 +27,19 @@ import TemporaryManpower from "../Services/TemporaryManpower";
 import IndustryWise from "../Services/IndustryWise";
 import Navblog from "../Navblog/Navblog";
 import FetchParticularBlog from "../Navblog/BlogFolders/FetchParticularBlog";
+import BFSI from "../ServingIndustry/IndustrySectionsFolder/BFSI";
+import Ecommerce from "../ServingIndustry/IndustrySectionsFolder/Ecommerce";
+import EducationTraining from "../ServingIndustry/IndustrySectionsFolder/EducationTraining";
+import Finance from "../ServingIndustry/IndustrySectionsFolder/Finance";
+import FMCD from "../ServingIndustry/IndustrySectionsFolder/FMCD";
+import Hospital from "../ServingIndustry/IndustrySectionsFolder/Hospital";
+import HotelAndHospitality from "../ServingIndustry/IndustrySectionsFolder/HotelAndHospitality";
+import Insurance from "../ServingIndustry/IndustrySectionsFolder/Insurance";
+import MediaEntertainment from "../ServingIndustry/IndustrySectionsFolder/MediaEntertainment";
+import RealEstate from "../ServingIndustry/IndustrySectionsFolder/RealEstate";
+import RenewableEnergy from "../ServingIndustry/IndustrySectionsFolder/RenewableEnergy";
+import Retail from "../ServingIndustry/IndustrySectionsFolder/Retail";
+import Telecom from "../ServingIndustry/IndustrySectionsFolder/Telecom";
 
 const Routing: React.FC = () => {
   const { user, isUserAuth } = useAppSelector((state) => state.user);
@@ -47,6 +60,22 @@ const Routing: React.FC = () => {
     { path: 'permanent-staffing', component: PermanentStaffingSolution },
   ];
 
+  const servingIndustry = [
+    { path: 'bfsi', component: BFSI },
+    { path: 'ecommerce', component: Ecommerce },
+    { path: 'education-training', component: EducationTraining },
+    { path: 'finance', component: Finance },
+    { path: 'renewable-energy', component: RenewableEnergy },
+    { path: 'talent-management', component: FMCD },
+    { path: 'hospital', component: Hospital },
+    { path: 'hotel-hospitality', component: HotelAndHospitality },
+    { path: 'telecom', component: Telecom },
+    { path: 'retail', component: Retail },
+    { path: 'insurance', component: Insurance },
+    { path:'real-estate',component:RealEstate},
+    { path: 'media-entertainment', component: MediaEntertainment },
+  ];
+
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
@@ -54,6 +83,11 @@ const Routing: React.FC = () => {
       <Route path="/enquiries/employee" element={<GetInTouch />} />
       <Route path="/navblog" element={<Navblog />} />
       
+      <Route path="/">
+        {servingIndustry.map(({ path, component: Component }) => (
+          <Route key={path} path={path} element={<Component />} />
+        ))}
+      </Route>
       <Route path="/services">
         {serviceRoutes.map(({ path, component: Component }) => (
           <Route key={path} path={path} element={<Component />} />
