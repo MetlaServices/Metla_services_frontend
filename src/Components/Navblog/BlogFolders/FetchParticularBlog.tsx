@@ -4,7 +4,29 @@ import { useAppDispatch, useAppSelector } from '../../Redux-Hooks/hooks';
 import { asyncGetBlogById } from '../../../store/actions/userAction';
 import ClipLoader from 'react-spinners/ClipLoader';
 
-const Loader = () => {
+// Define the interfaces for blog content
+export interface ISubheadingContent {
+  subheading: string;
+  content: string;
+}
+
+export interface IHeadingContent {
+  heading: string;
+  subheadings?: ISubheadingContent[]; // Optional array of subheadings
+}
+
+export interface IBlog {
+  title: string;
+  image?: {
+    url: string;
+    fileId: string;
+  };
+  createdAt: string; // Adjust based on your actual createdAt type
+  headings: IHeadingContent[]; // Array of headings
+}
+
+// Loader component
+const Loader: React.FC = () => {
   return (
     <div className="flex justify-center items-center h-screen">
       <ClipLoader color="#3498db" size={50} />
@@ -12,8 +34,8 @@ const Loader = () => {
   );
 };
 
-
-const FetchParticularBlog = () => {
+// FetchParticularBlog component
+const FetchParticularBlog: React.FC = () => {
   const { id } = useParams<{ id: string }>(); // Type the params
   const dispatch = useAppDispatch();
   const { blog, loading } = useAppSelector((state) => state.user); // Assume you have a loading state
@@ -43,7 +65,18 @@ const FetchParticularBlog = () => {
         />
       )}
       <div className="text-lg text-gray-700 mb-4">
-        <p>{blog.content}</p>
+        {/* Iterate through the headings to display them */}
+        {blog.headings.map((headingContent: IHeadingContent, index: number) => (
+          <div key={index} className="mb-6">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-2">{headingContent.heading}</h2>
+            {headingContent.subheadings?.map((subheading: ISubheadingContent, subIndex: number) => (
+              <div key={subIndex} className="mb-4">
+                <h3 className="text-xl font-semibold text-gray-700">{subheading.subheading}</h3>
+                <p>{subheading.content}</p>
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
       <div className="flex justify-between items-center mt-6">
         <Link to="/navblog" className="text-blue-700 hover:text-blue-900">
