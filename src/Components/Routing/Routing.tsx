@@ -88,11 +88,13 @@ const Routing: React.FC = () => {
           <Route key={path} path={path} element={<Component />} />
         ))}
       </Route>
-      <Route path="/services">
+      <Route path="/">
         {serviceRoutes.map(({ path, component: Component }) => (
           <Route key={path} path={path} element={<Component />} />
         ))}
       </Route>
+
+
 
       <Route path="/contact" element={<ContactUs />} />
       <Route path="/about" element={<AboutUsPage />} />
