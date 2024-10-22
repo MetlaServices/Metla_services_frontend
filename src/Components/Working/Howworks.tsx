@@ -117,7 +117,7 @@ const HowItWorks: React.FC = () => {
         <div className="mt-8">
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6"> {/* Flexbox for responsive layout */}
             {featureSteps.map((feature, index) => (
-              <div key={index} className="flex flex-col items-center w-full max-w-xs p-6 bg-gray-100 rounded-lg shadow-md transition-transform transform hover:scale-105"> {/* Flexbox on card */}
+              <div key={index} className="flex flex-col items-center w-full max-w-xs p-6 -100 transition-transform transform hover:scale-105"> {/* Flexbox on card */}
                 <img src={feature.image} alt={feature.title} className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mb-2" />
                 <h3 className="text-lg sm:text-xl font-semibold mb-1 text-center">{feature.title}</h3>
                 <p className="text-gray-600 text-center text-sm sm:text-base">{feature.content}</p>
