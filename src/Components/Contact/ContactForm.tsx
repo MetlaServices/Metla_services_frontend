@@ -21,7 +21,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <div
-      className="relative min-h-screen flex items-center justify-center bg-cover bg-center"
+      className="relative min-h-screen flex items-center justify-center bg-cover bg-center px-4 md:px-8 lg:px-20"
       style={{
         backgroundImage: `url(${contactImage})`, // Background image
       }}
@@ -30,8 +30,8 @@ const ContactForm: React.FC = () => {
       <div className="absolute inset-0 bg-black opacity-40"></div>
   
       {/* Form container with cream background */}
-      <div className="relative bg-gradient-to-br from-[#fbfff6] to-[#d9ffe9] p-10 rounded-2xl shadow-xl max-w-md mx-auto z-10 w-full">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-800">Contact Us</h2>
+      <div className="relative bg-gradient-to-br from-[#fbfff6] to-[#d9ffe9] p-6 md:p-10 rounded-2xl shadow-xl max-w-sm sm:max-w-md lg:max-w-lg mx-auto z-10 w-full">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 text-center text-gray-800">Contact Us</h2>
   
         {/* Contact Form */}
         <Form
@@ -40,7 +40,7 @@ const ContactForm: React.FC = () => {
           onFinishFailed={onFinishFailed}
           className="space-y-4"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-[-20px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <Form.Item
               name="name"
               label="Name"
@@ -48,7 +48,7 @@ const ContactForm: React.FC = () => {
             >
               <Input
                 placeholder="John Doe"
-                className="border-gray-300 rounded-full shadow-md p-2 text-lg"
+                className="border-gray-300 rounded-full shadow-md p-2 text-base sm:text-lg"
               />
             </Form.Item>
             <Form.Item
@@ -58,7 +58,7 @@ const ContactForm: React.FC = () => {
             >
               <Input
                 placeholder="john.doe@example.com"
-                className="border-gray-300 rounded-full shadow-md p-2 text-lg"
+                className="border-gray-300 rounded-full shadow-md p-2 text-base sm:text-lg"
               />
             </Form.Item>
           </div>
@@ -69,7 +69,7 @@ const ContactForm: React.FC = () => {
           >
             <Input
               placeholder="+91-9599383349"
-              className="border-gray-300 rounded-full shadow-md p-2 text-lg"
+              className="border-gray-300 rounded-full shadow-md p-2 text-base sm:text-lg"
             />
           </Form.Item>
           <Form.Item
@@ -80,14 +80,14 @@ const ContactForm: React.FC = () => {
             <TextArea
               rows={4}
               placeholder="Your message here..."
-              className="border-gray-300 rounded-lg shadow-md p-2 text-lg"
+              className="border-gray-300 rounded-lg shadow-md p-2 text-base sm:text-lg"
             />
           </Form.Item>
           <Form.Item>
             <Button
               type="primary"
               htmlType="submit"
-              className="w-full mt-4 py-5 text-lg font-semibold  bg-gradient-to-br from-[#a1cd64] to-[#408a60] text-white hover:opacity-90 rounded-full transition duration-300"
+              className="w-full mt-4 py-3 sm:py-4 text-base sm:text-lg font-semibold bg-gradient-to-br from-[#a1cd64] to-[#408a60] text-white hover:opacity-90 rounded-full transition duration-300"
               loading={loading} // Show loading spinner during submission
             >
               {loading ? <Spin /> : 'Submit'}
@@ -97,8 +97,6 @@ const ContactForm: React.FC = () => {
       </div>
     </div>
   );
-  
-  
 };
 
 export default ContactForm;
