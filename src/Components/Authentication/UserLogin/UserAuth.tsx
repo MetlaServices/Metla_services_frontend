@@ -10,6 +10,8 @@ const { Title, Text } = Typography;
 
 
 
+
+
 export const UserAuth: React.FC = () => {
     const [email, setEmail] = useState('');
     const [loading, setLoading] = useState(false); // Local loading state
