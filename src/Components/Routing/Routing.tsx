@@ -13,11 +13,6 @@ import ContactUs from "../Contact/ContactForm";
 import AboutUsPage from "../AboutUs/AboutUs";
 import NotFoundPage from "../Others/NotFound";
 import JobListings from "../Jobs/JobBasket";
-import {
-  AdminLogin,
-  ForgotPassword,
-  Register,
-} from "../Authentication/AdminLogin/AdminAuth";
 
 import { useAppSelector } from "../Redux-Hooks/hooks";
 import Unauthorized from "../Others/Unauthorized";
@@ -116,9 +111,7 @@ const Routing: React.FC = () => {
       <Route path="/about" element={<AboutUsPage />} />
       <Route path="*" element={<NotFoundPage />} />
       <Route path="/jobs" element={<JobListings />} />
-      <Route path="/admin/login" element={<AdminLogin />} />
-      <Route path="/admin/forgot-password" element={<ForgotPassword />} />
-      <Route path="/admin/register" element={<Register />} />
+     
 
       <Route
         path="/user/verify-otp/:email"

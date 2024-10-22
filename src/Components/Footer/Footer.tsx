@@ -158,9 +158,9 @@ const socialMediaVariants = {
 
 const Footer: React.FC = () => {
   return (
-    <Layout.Footer className="bg-gray-100 text-black py-13 relative footer border-t border-gray-300"> {/* Slightly larger padding for overall spacing */}
+    <Layout.Footer className="static bottom-0 bg-gray-100 text-black py-13 footer border-t border-gray-300"> {/* Slightly larger padding for overall spacing */}
       <motion.div
-        className="container mx-auto px-4"
+        className="container mx-auto px-4 "
         initial="hidden"
         animate="visible"
         variants={footerVariants}
