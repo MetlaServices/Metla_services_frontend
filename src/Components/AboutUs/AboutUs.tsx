@@ -33,7 +33,7 @@ const cardContent = [
   },
   {
     title: 'Our Focus',
-    description: 'Our focus is on unlocking the full potential of your human capital. With strategic insights, cutting-edge tools, and dedicated support, we help you harness your workforce’s capabilities to achieve your business objectives.',
+    description: 'Our focus is on unlocking the full potential of your human capital. With strategic insights, cutting-edge tools, and dedicated support, we help you harness your workforce’s capabilities .',
     image: focusImage,
   },
   {
