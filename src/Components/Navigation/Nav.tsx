@@ -175,11 +175,7 @@ const Nav: React.FC = () => {
             </Button>
           </Dropdown>
           <Link to="/navblog" className="text-lg font-semibold px-3 py-2 rounded-md flex items-center hover:text-yellow-500 hover:underline" onClick={handleLinkClick}>
-<<<<<<< HEAD
-            Blog
-=======
             Blogs
->>>>>>> 05e0032dd0264debf1ab4536307aeb8ec330a18e
           </Link>
         </div>
       </Drawer>

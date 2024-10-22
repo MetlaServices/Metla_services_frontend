@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-
-import { Link } from 'react-router-dom';
-import navblogbanner from '../../assets/navblogfolder/navblogbanner.webp'
-=======
 import { useEffect } from 'react';
 import navblogbanner from '../../assets/navblogfolder/navblogbanner.webp';
 import { useAppDispatch, useAppSelector } from '../Redux-Hooks/hooks';
 import { asyncGetAllBlogs } from '../../store/actions/userAction';
 import { Link } from 'react-router-dom';
->>>>>>> 05e0032dd0264debf1ab4536307aeb8ec330a18e
 
 const Navblog = () => {
   const dispatch = useAppDispatch();
@@ -47,80 +41,6 @@ const Navblog = () => {
 
       {/* Content Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-16">
-<<<<<<< HEAD
-        {/* Card 1 */}
-        <div className="bg-white border border-gray-300 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
-          <img
-            className="w-full h-40 object-cover"
-            src="https://media.istockphoto.com/id/2160663785/photo/the-companys-services-recruit-customers.jpg?s=612x612&w=0&k=20&c=F-3STT9xrnyPOkxrFlmhXTTPEs1nyoqeYxrt2Pl_kCA="
-            alt="Hiring process"
-          />
-          <div className="p-6">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-3">
-              {/* Fast & Efficient Hiring */}
-
-            Metla Services: Fast & Efficient Hiring
-            </h3>
-            <p className="text-gray-600 mb-4">
-              {/* Quick, professional hiring solutions for growing businesses. */}
-              Metla Services ensures fast, efficient hiring with quality candidates, helping businesses save time and costs
-            </p>
-            <Link
-              to="/blog1"
-              className="text-blue-700 font-medium hover:text-gray-900 transition"
-            >
-             Read More
-            </Link>
-          </div>
-        </div>
-
-        {/* Card 2 */}
-        <div className="bg-white border border-gray-300 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
-          <img
-            className="w-full h-40 object-cover"
-            src="https://media.istockphoto.com/id/1139078647/photo/the-team-to-call-to-get-through-to-the-network.jpg?s=612x612&w=0&k=20&c=cQfb-SOsH0AAzAj9XBvB12NqOMYn22aEMwCrBAzkLmg="
-            alt="Team Morale"
-          />
-          <div className="p-6">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-3">
- 
-            Find the Right Talent with Metla Services
-            </h3>
-            <p className="text-gray-600 mb-4">
-           Discover how Metla Services helps businesses across industries find the right talent quickly and efficiently through their expertise and vast talent pool.
-            </p>
-            <Link
-              to="/blog2"
-              className="text-blue-700 font-medium hover:text-gray-900 transition"
-            >
-              Read More
-            </Link>
-          </div>
-        </div>
-
-        {/* Card 3
-        <div className="bg-white border border-gray-300 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
-          <img
-            className="w-full h-40 object-cover"
-            src="https://images.pexels.com/photos/3182826/pexels-photo-3182826.jpeg?auto=compress&cs=tinysrgb&w=600"
-            alt="Strategy"
-          />
-          <div className="p-6">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-3">
-              Staying Ahead of the Competition
-            </h3>
-            <p className="text-gray-600 mb-4">
-              Stay competitive with quick, smart hiring strategies.
-            </p>
-            <a
-              href="/contact"
-              className="text-blue-700 font-medium hover:text-gray-900 transition"
-            >
-              Read More
-            </a>
-          </div>
-        </div> */}
-=======
         {blogs.map((blog) => (
           <div key={blog._id} className="bg-white border border-gray-300 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
             <img
@@ -144,7 +64,6 @@ const Navblog = () => {
             </div>
           </div>
         ))}
->>>>>>> 05e0032dd0264debf1ab4536307aeb8ec330a18e
       </div>
 
       {/* Info Section */}
